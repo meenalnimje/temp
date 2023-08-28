@@ -1,0 +1,108 @@
+.footer {
+    // border: 2px solid red;
+    background-color: #0a0027;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    left: 0;
+    color: white;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        // border: 2px solid red;
+        width: 100%;
+        height: 100%;
+
+        .part1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 85%;
+
+            .left {
+                // border: 2px solid red;
+
+                .title {
+                    margin-bottom: 20px;
+                    font-size: 2.5rem;
+
+                    .p1 {
+                        color: #FF6F0F;
+                    }
+                }
+
+                .desc {
+                    margin-bottom: 25px;
+                }
+
+                .social-media {
+                    display: flex;
+                    // border: 2px solid red;
+                    width: 45%;
+                    height: 52px;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .icons {
+                        border: 2px solid rgb(161, 177, 191);
+                        color: rgb(161, 177, 191);
+                        height: 100%;
+                        width: 33%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .right {
+                // border: 2px solid white;
+                height: 170px;
+                width: 499px;
+
+                .address {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: rgb(161, 177, 191);
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // border: 2px solid red;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .part2 {
+            // border: 2px solid white;
+            border-top: 2px solid white;
+            opacity: 0.3;
+
+            .bottom {
+                display: flex;
+                // flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 180px;
+                font-size: 20px;
+                padding: 12px;
+            }
+        }
+    }
+}

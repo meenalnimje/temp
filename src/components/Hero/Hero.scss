@@ -1,0 +1,139 @@
+.hero {
+    .container {
+        position: relative;
+        top: -80px;
+        height: 100vh;
+        background: rgb(32, 32, 32);
+        overflow: hidden;
+        margin: auto;
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // border: 2px solid red;
+            width: 600px;
+            position: absolute;
+            z-index: 999;
+            color: white;
+            top: 37%;
+            left: 31%;
+
+            h1 {
+                font-size: 60px;
+
+                .title1 {
+                    color: #FF6F0F;
+                }
+
+            }
+
+        }
+
+        .description {
+            // border: 2px solid red;
+            text-align: center;
+            width: 800px;
+            position: absolute;
+            z-index: 999;
+            color: rgb(207, 205, 205);
+            top: 49%;
+            left: 25%;
+
+            p {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+
+            .buttons {
+                margin-top: 30px;
+                // border: 2px solid blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-primary {
+                    color: white;
+                    background-color: transparent;
+                    padding: 12px 24px;
+                    border: 2px solid white;
+                    font-size: 16px;
+                    height: 50px;
+                    width: 180px;
+                    border-radius: 10px;
+                    transition: all ease-in 0.3s;
+                    cursor: pointer;
+                    margin-right: 200px;
+
+                    &:hover {
+                        background-color: #FF6F0F;
+                        color: white;
+                        outline: 2px solid #FF6F0F;
+                    }
+                }
+
+                .btn-secondary {
+                    color: white;
+                    background-color: transparent;
+                    padding: 12px 24px;
+                    border: 2px solid white;
+                    font-size: 16px;
+                    height: 50px;
+                    width: 180px;
+                    border-radius: 10px;
+                    transition: all ease-in 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #FF6F0F;
+                        color: white;
+                        outline: 2px solid #FF6F0F;
+                    }
+                }
+
+            }
+        }
+
+        .carousel-bullet {
+            position: absolute;
+            bottom: 3%;
+            left: 45%;
+            // border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                width: 12px;
+                height: 12px;
+                background-color: rgb(160, 159, 159);
+                margin-left: 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 3px 2px 2px rgba(73, 72, 72, 0.338);
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .conatiner {
+        position: relative;
+
+        .title {
+            position: absolute;
+            z-index: 999;
+            top: 20%;
+            left: 20%;
+            font-size: 16px;
+        }
+
+        .description {
+            position: absolute;
+            z-index: 999;
+            top: 49%;
+            left: 25%;
+        }
+    }
+}
