@@ -70,9 +70,14 @@ function SingleSport() {
       <Navbar />
       <div className="sportspage">
         <div className="popup-content">
-          <div className="match-popup" >
-            <h2>Upcoming Matches</h2>
-            <GrFormNext onClick={() => setPopUpOpen(!popUpOpen)} className="next"/>
+          <div className="match-popup">
+            <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
+              Click here for Upcoming Matches
+            </h2>
+            <GrFormNext
+              onClick={() => setPopUpOpen(!popUpOpen)}
+              className="next"
+            />
           </div>
           {popUpOpen && (
             <UpcomingMatch

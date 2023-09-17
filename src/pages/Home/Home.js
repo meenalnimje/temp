@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
+import "./Home.scss";
 function Home() {
   return (
     <div className="Home">

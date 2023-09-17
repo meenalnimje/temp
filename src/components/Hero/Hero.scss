@@ -2,96 +2,98 @@
     .container {
         position: relative;
         top: -80px;
-        height: 100vh;
-        background: rgb(32, 32, 32);
-        overflow: hidden;
-        margin: auto;
 
-        .title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            // border: 2px solid red;
-            width: 600px;
-            position: absolute;
-            z-index: 999;
-            color: white;
-            top: 37%;
-            left: 31%;
+        .content-hero {
+            height: 100vh;
+            background: rgb(4, 3, 5);
+            overflow: hidden;
 
-            h1 {
+            .title {
+                position: absolute;
+                top: 33%;
+                left: 36%;
                 font-size: 60px;
 
                 .title1 {
                     color: #FF6F0F;
                 }
 
+                .title2 {
+                    color: white;
+                }
+
             }
 
-        }
-
-        .description {
-            // border: 2px solid red;
-            text-align: center;
-            width: 800px;
-            position: absolute;
-            z-index: 999;
-            color: rgb(207, 205, 205);
-            top: 49%;
-            left: 25%;
-
-            p {
-                margin-bottom: 10px;
-                font-size: 24px;
-            }
-
-            .buttons {
-                margin-top: 30px;
-                // border: 2px solid blue;
+            .description {
+                // border: 2px solid red;
                 display: flex;
-                align-items: center;
                 justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                top: 45%;
+                left: 33%;
+                color: white;
 
-                .btn-primary {
-                    color: white;
-                    background-color: transparent;
-                    padding: 12px 24px;
-                    border: 2px solid white;
-                    font-size: 16px;
-                    height: 50px;
-                    width: 180px;
-                    border-radius: 10px;
-                    transition: all ease-in 0.3s;
-                    cursor: pointer;
-                    margin-right: 200px;
-
-                    &:hover {
-                        background-color: #FF6F0F;
-                        color: white;
-                        outline: 2px solid #FF6F0F;
-                    }
+                p {
+                    margin-bottom: 10px;
+                    font-size: 24px;
                 }
 
-                .btn-secondary {
-                    color: white;
-                    background-color: transparent;
-                    padding: 12px 24px;
-                    border: 2px solid white;
-                    font-size: 16px;
-                    height: 50px;
-                    width: 180px;
-                    border-radius: 10px;
-                    transition: all ease-in 0.3s;
-                    cursor: pointer;
+                .buttons {
+                    margin-top: 30px;
+                    // border: 2px solid blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                    &:hover {
-                        background-color: #FF6F0F;
-                        color: white;
-                        outline: 2px solid #FF6F0F;
+                    .btn1 {
+                        .btn-primary {
+                            color: white;
+                            background-color: transparent;
+                            padding: 12px 24px;
+                            border: 2px solid white;
+                            font-size: 16px;
+                            height: 50px;
+                            width: 180px;
+                            border-radius: 10px;
+                            transition: all ease-in 0.3s;
+                            cursor: pointer;
+                            margin-right: 200px;
+
+                            &:hover {
+                                background-color: #FF6F0F;
+                                color: white;
+                                outline: 2px solid #FF6F0F;
+                            }
+                        }
+
                     }
-                }
 
+                    .btn2 {
+                        .btn-secondary {
+                            color: white;
+                            background-color: transparent;
+                            padding: 12px 24px;
+                            border: 2px solid white;
+                            font-size: 16px;
+                            height: 50px;
+                            width: 180px;
+                            border-radius: 10px;
+                            transition: all ease-in 0.3s;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #FF6F0F;
+                                color: white;
+                                outline: 2px solid #FF6F0F;
+                            }
+                        }
+                    }
+
+                }
             }
+
         }
 
         .carousel-bullet {
@@ -113,27 +115,85 @@
                 box-shadow: 3px 2px 2px rgba(73, 72, 72, 0.338);
             }
         }
+
     }
 
 }
 
-@media only screen and (max-width: 1000px) {
-    .conatiner {
-        position: relative;
+@media only screen and (max-width: 960px) {}
 
-        .title {
-            position: absolute;
-            z-index: 999;
-            top: 20%;
-            left: 20%;
-            font-size: 16px;
-        }
+@media only screen and (max-width: 500px) {
+    .hero {
+        .container {
+            display: flex;
+            justify-content: center;
+            // flex-direction: column;
+            align-items: center;
+            border: 2px solid yellow;
+            width: 100%;
 
-        .description {
-            position: absolute;
-            z-index: 999;
-            top: 49%;
-            left: 25%;
+            .content-hero {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                // align-items: start;
+                // justify-content: start;
+
+                .title {
+                    position: absolute;
+                    top: 100px;
+                    left: 15%;
+                    width: 100%;
+                    // height: 30px;
+
+                    .title1,
+                    .title2 {
+                        font-size: 30px;
+                    }
+                }
+
+                .description {
+                    position: absolute;
+                    top: 200px;
+                    left: 15%;
+                    width: 70%;
+                    // // color: white;
+                    // border: 2px solid red;
+
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    // border: 2px solid red;
+                    align-items: center;
+                    font-size: 18px;
+
+                    .btn-primary {
+                        position: relative;
+                        top: 70%;
+                        left: 26%;
+                        margin-bottom: 20px;
+
+                    }
+                }
+            }
+
+            .carousel-bullet {
+                position: absolute;
+                bottom: 3%;
+                left: 30%;
+                // border: 2px solid red;
+            }
         }
     }
 }

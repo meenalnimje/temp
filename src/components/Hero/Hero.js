@@ -17,9 +17,9 @@ function Hero() {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100%",
-    transition: "all ease-in 2s",
+    transition: "all ease-in-out 2s",
     objectFit: "cover",
-    opacity: "0.4",
+    opacity: "0.8",
   };
   const goToNext = (currState) => {
     setCurrState(currState);
@@ -37,27 +37,31 @@ function Hero() {
   return (
     <div className="hero">
       <div className="container">
-        <div style={bgImageStyle}></div>
-        <div className="title">
-          <h1>
+        <div className="content-hero">
+          <div style={bgImageStyle}></div>
+          <div className="title">
             <span className="title1">ASHVA</span>
             <span className="title2">MEDHA-23</span>
-          </h1>
-        </div>
-        <div className="description">
-          <p className="theme">GET YOUR GAME ON</p>
-          <p className="date">OCTOBER 28 - OCTOBER 29</p>
-          <p className="name">THE ANNUAL SPORTS FEST OF IIT BHUBHANESWAR</p>
-          <div className="buttons">
-            <button
-              className="btn-primary"
-              onClick={() => {
-                navigate("/events");
-              }}
-            >
-              REGISTER NOW
-            </button>
-            <button className="btn-secondary">FIXTURES</button>
+          </div>
+          <div className="description">
+            <p className="theme">GET YOUR GAME ON</p>
+            <p className="date">OCTOBER 28 - OCTOBER 29</p>
+            <p className="name">THE ANNUAL SPORTS FEST OF IIT BHUBHANESWAR</p>
+            <div className="buttons">
+              <div className="btn1">
+                <button
+                  className="btn-primary"
+                  onClick={() => {
+                    navigate("/events");
+                  }}
+                >
+                  REGISTER NOW
+                </button>
+              </div>
+              <div className="btn2">
+                <button className="btn-secondary">FIXTURES</button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="carousel-bullet">

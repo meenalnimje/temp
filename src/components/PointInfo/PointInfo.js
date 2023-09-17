@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PointInfo from "../../components/PointInfo/PointInfo";
-import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
-function Leaderboard() {
+function PointInfo(props) {
+  const [collegePoints, setCollegePoints] = useState([]);
   const collegeInfo = [
     {
       collegeName: "niser",
@@ -65,18 +64,36 @@ function Leaderboard() {
       collegeLogo: "",
     },
   ];
+  async function fetchdata() {
+    // const response = await axios.post("/college/", {
+    //   collegeName: "niser",
+    // });
+    const collegePointTable = await collegeInfo.map((element) =>
+      axios.post("/college/", { collegeName: element.collegeName })
+    );
+    const infos = await Promise.all(collegePointTable);
+    const collegeDetails = infos.map((element) => element.data);
+    setCollegePoints(collegeDetails);
+  }
+  useEffect(() => {
+    fetchdata();
+  }, []);
   return (
-    <div className="leaderboard">
-      <div className="heading">
-        <h1 className="text">POINT TABLE</h1>
-      </div>
+    <div className="pointinfo">
       <div className="content">
-        {collegeInfo.map((item) => (
-          <CollegeWrapper collegeInfo={item} />
-        ))}
+        <div className="matchname">
+          <span>match1</span>
+        </div>
+        <div className="oppenent-name">
+          <h2>IIT BBS</h2>
+        </div>
+        <div className="sportname">volleyball</div>
+        <div className="points">
+          <span>100</span>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Leaderboard;
+export default PointInfo;

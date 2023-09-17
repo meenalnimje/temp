@@ -53,34 +53,6 @@ function Events() {
       desc: "Get ready to participate in the fiercest tournament of the year as we bring to you the table tennis tournament in Aavhan this year. We are hosting three categories for table tennis - men’s singles, men’s team and women’s singles. Only the most skilled and seasoned player will emerge victorious. So gather your racquets and sharpen your skills. I wish you all the very best for the epic showdown at the table.May the best player win.",
       date: "28th-29th October",
     },
-    {
-      id: 6,
-      sportName: "Table Tennis",
-      imgUrl: tabletennis,
-      desc: "Get ready to participate in the fiercest tournament of the year as we bring to you the table tennis tournament in Aavhan this year. We are hosting three categories for table tennis - men’s singles, men’s team and women’s singles. Only the most skilled and seasoned player will emerge victorious. So gather your racquets and sharpen your skills. I wish you all the very best for the epic showdown at the table.May the best player win.",
-      date: "28th-29th October",
-    },
-    {
-      id: 6,
-      sportName: "Table Tennis",
-      imgUrl: tabletennis,
-      desc: "Get ready to participate in the fiercest tournament of the year as we bring to you the table tennis tournament in Aavhan this year. We are hosting three categories for table tennis - men’s singles, men’s team and women’s singles. Only the most skilled and seasoned player will emerge victorious. So gather your racquets and sharpen your skills. I wish you all the very best for the epic showdown at the table.May the best player win.",
-      date: "28th-29th October",
-    },
-    {
-      id: 6,
-      sportName: "Table Tennis",
-      imgUrl: tabletennis,
-      desc: "Get ready to participate in the fiercest tournament of the year as we bring to you the table tennis tournament in Aavhan this year. We are hosting three categories for table tennis - men’s singles, men’s team and women’s singles. Only the most skilled and seasoned player will emerge victorious. So gather your racquets and sharpen your skills. I wish you all the very best for the epic showdown at the table.May the best player win.",
-      date: "28th-29th October",
-    },
-    {
-      id: 6,
-      sportName: "Table Tennis",
-      imgUrl: tabletennis,
-      desc: "Get ready to participate in the fiercest tournament of the year as we bring to you the table tennis tournament in Aavhan this year. We are hosting three categories for table tennis - men’s singles, men’s team and women’s singles. Only the most skilled and seasoned player will emerge victorious. So gather your racquets and sharpen your skills. I wish you all the very best for the epic showdown at the table.May the best player win.",
-      date: "28th-29th October",
-    },
   ];
   return (
     <div className="events">
