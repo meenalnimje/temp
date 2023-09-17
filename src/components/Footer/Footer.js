@@ -5,6 +5,31 @@ import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
 import { BiSolidPhoneCall, BiCopyright } from "react-icons/bi";
 import "./Footer.scss";
 function Footer() {
+
+  const handleRedirect = (platform) => {
+    let url;
+  
+    switch (platform) {
+      case 1:
+        // Instagram
+        url = "https://www.instagram.com/ashvamedha_iitbbs/";
+        break;
+      case 2:
+        // Facebook
+        url = "https://www.facebook.com/AshvamedhaIITBBS/";
+        break;
+      case 3:
+        // LinkedIn
+        url = "https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/";
+        break;
+      default:
+        // Default action if platform parameter is not recognized
+        return;
+    }
+  
+    window.open(url, "_blank"); // Open the URL in a new tab
+  };
+
   return (
     <div className="footer ContactUs">
       <div className="container">
@@ -16,13 +41,13 @@ function Footer() {
             </h1>
             <h2 className="desc">The Annual Sports fest of IIT Bhubaneswar</h2>
             <div className="social-media">
-              <div className="icons">
+              <div className="icons" onClick={() => handleRedirect(1)}>
                 <AiOutlineInstagram />
               </div>
-              <div className="icons">
+              <div className="icons" onClick={() => handleRedirect(2)}>
                 <FaFacebookF />
               </div>
-              <div className="icons">
+              <div className="icons" onClick={() => handleRedirect(3)}>
                 <FaLinkedinIn />
               </div>
             </div>
