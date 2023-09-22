@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import "./CollegeWrapper.scss";
+import { AiOutlineDoubleRight } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 function CollegeWrapper(props) {
-  //   const [collegeSportDetails, setCollegeSportDetails] = useState([]);
-  //   async function fetchdata() {
-  //     const detail = await axios.post("/college/", {
-  //       collegeName: props.collegeInfo.collegeName,
-  //     });
-  //     setCollegeSportDetails(detail.data.result.modifiedResult);
-  //   }
-  const [collegeScore, setCollegeScore] = useState(0);
-  async function fetchScore() {
-    const totalScore = await axios.post("/college/score", {
-      collegeName: props.collegeInfo.collegeName,
-    });
-    setCollegeScore(totalScore.data.result.score);
-  }
-  useEffect(() => {
-    // fetchdata();
-    fetchScore();
-  }, []);
+  const navigate = useNavigate();
   return (
     <div className="collegewrapper">
-      <div>
-        <div className="serial-no">1</div>
-        <div className="collegename">{props.collegeInfo.displayName}</div>
-        <div className="score">{collegeScore}</div>
+      <div className="serial-no">{props.serialNo + 1}</div>
+      <div className="collegename">{props.collegeInfo[1]}</div>
+      <div className="score"> {props.collegeInfo[0]}</div>
+      <div
+        className="next"
+        onClick={() => navigate(`/leaderboard/${props.collegeInfo[1]}`)}
+      >
+        <AiOutlineDoubleRight />
       </div>
     </div>
   );

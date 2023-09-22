@@ -14,21 +14,30 @@
 
         .popup-content {
             width: 100%;
+            // border: 2px solid red;
             height: 20%;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
 
             .match-popup {
-                width: 15%;
-                // border: 2px solid red;
+                width: 20%;
                 display: flex;
-                justify-content: space-around;
                 align-items: center;
+                justify-content: space-around;
+                // border: 2px solid red;
+
+                .hover-link {
+                    font-size: 20px;
+                    // position: absolute;
+                    cursor: pointer;
+                    // top: 70px;
+                    flex: 4;
+                }
 
                 .next {
-                    font-size: 20px;
-                    background-color: #fff;
+                    font-size: 40px;
+                    background-color: transparent;
                     cursor: pointer;
                 }
             }
@@ -38,11 +47,10 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            margin-top: 30px;
+            // margin-top: 30px;
             // border: 2px solid red;
             height: 500px;
-            width: 79%;
-            // padding-top: 20px;
+            width: 80%;
 
             .sports-img {
                 border: 2px solid white;
@@ -71,17 +79,24 @@
                 text-align: center;
 
                 .name {
+                    margin-top: -10px;
                     font-size: 54px;
                 }
 
                 .desc {
-                    margin-top: 15px;
-                    margin-bottom: 20px;
+                    // margin-top: 15px;
+                    margin-bottom: 10px;
                     font-size: 28px;
                 }
 
                 .date {
                     margin-bottom: 5px;
+                }
+
+                .rulebook {
+                    text-decoration: none;
+                    font-size: 28px;
+                    color: #fff;
                 }
 
                 .register-btn {
@@ -197,6 +212,7 @@
             align-items: center;
             flex-direction: column;
             height: 150%;
+
             .popup-content {
                 // border: 2px solid red;
                 height: 150px;

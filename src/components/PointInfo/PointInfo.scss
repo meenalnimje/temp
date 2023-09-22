@@ -1,0 +1,54 @@
+.pointinfo {
+    border: 2px solid white;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    align-items: center;
+    margin: 10px;
+    width: 50%;
+    text-transform: uppercase;
+
+    .serial-no {
+        width: 10%;
+        margin-left: 20px;
+        // border: 2px solid wheat;
+    }
+
+    .category {
+
+        width: 30%;
+    }
+
+    .opponent {
+
+        // border: 2px solid wheat;
+        width: 20%;
+
+        .name {
+            margin-left: 5px;
+        }
+    }
+
+    .point {
+        width: 20%;
+        // border: 2px solid wheat;
+
+    }
+
+    .sportname {
+        width: 30%;
+    }
+
+    .serial-no,
+    .category,
+    .opponent,
+    .point,
+    .sportname {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

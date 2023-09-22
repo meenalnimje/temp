@@ -31,9 +31,10 @@ function Navbar() {
       navigate: true,
     },
     {
-      title: "Rulebook",
-      path: "/rulebook",
+      title: "Our Team",
+      path: "/team",
       cName: "nav-text",
+      navigate: true,
     },
     {
       title: "Sponsors",

@@ -1,0 +1,45 @@
+.collegewrapper {
+    border-bottom: 2px solid white;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+
+    .serial-no {
+        // border: 2px solid red;
+        width: 20%;
+        // flex: 1;
+    }
+
+    .collegename {
+        // border: 2px solid red;
+        text-transform: uppercase;
+        width: 50%;
+
+    }
+
+    .score {
+        width: 10%;
+
+    }
+
+    .next {
+        width: 10%;
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    .serial-no,
+    .collegename,
+    .score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+}

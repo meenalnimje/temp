@@ -5,3 +5,86 @@
     top: -80px;
     // border: 2px solid red;
 }
+
+.AboutUs {
+    .content {
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        text-align: center;
+
+        //   h1.title {
+        //     font-size: 3rem;
+        //     margin-bottom: 20px;
+        //   }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            justify-content: center;
+            // border: 2px solid red;
+            width: 600px;
+            position: absolute;
+            z-index: 999;
+            color: white;
+            top: 4%;
+            left: 31%;
+
+            h1 {
+                font-size: 60px;
+
+                .title1 {
+                    color: #FF6F0F;
+                }
+
+            }
+
+        }
+
+
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-top: 150px;
+            background-color: #0a0027;
+            padding: 30px;
+            border-radius: 40px;
+            margin-left: 100px;
+            width: 50vw;
+        }
+    }
+
+    .parallax__layer--base {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .para {
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 40vw;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.main-body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.ath {
+    position: absolute;
+    top: 210px;
+    right: 150px;
+
+    img {
+        height: 420px;
+        width: 420px;
+    }
+}

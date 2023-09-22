@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PointInfo from "../../components/PointInfo/PointInfo";
 import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
+import "./Leaderboard.scss";
 function Leaderboard() {
+  const [collegeScore, setCollegeScore] = useState([]);
   const collegeInfo = [
     {
       collegeName: "niser",
@@ -65,14 +66,31 @@ function Leaderboard() {
       collegeLogo: "",
     },
   ];
+  async function fetchScore() {
+    const ticketInfos = await collegeInfo.map((item) =>
+      axios.post("/college/score", {
+        collegeName: item.collegeName,
+      })
+    );
+    const infos = await Promise.all(ticketInfos);
+    const array = infos.map((item) => (item = item.data.result));
+    const sortedArray = array.sort(function (a, b) {
+      return b[0] - a[0];
+    });
+    setCollegeScore(sortedArray);
+  }
+  useEffect(() => {
+    // fetchdata();
+    fetchScore();
+  }, []);
   return (
     <div className="leaderboard">
       <div className="heading">
         <h1 className="text">POINT TABLE</h1>
       </div>
       <div className="content">
-        {collegeInfo.map((item) => (
-          <CollegeWrapper collegeInfo={item} />
+        {collegeScore.map((item, index) => (
+          <CollegeWrapper collegeInfo={item} serialNo={index} />
         ))}
       </div>
     </div>
