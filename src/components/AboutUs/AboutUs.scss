@@ -1,164 +1,90 @@
 .AboutUs {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    top: -80px;
-    // border: 2px solid red;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: -80px;
+  // border: 2px solid red;
 }
 
 .AboutUs {
-    .content {
-<<<<<<< HEAD
-        padding: 50px;
-        background-color: rgba(0, 0, 0, 0.3);
-        color: #fff;
-        text-align: center;
+  .content {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
 
-        //   h1.title {
-        //     font-size: 3rem;
-        //     margin-bottom: 20px;
-        //   }
-
-        .title {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            justify-content: center;
-            // border: 2px solid red;
-            width: 600px;
-            position: absolute;
-            z-index: 999;
-            color: white;
-            top: 4%;
-            left: 31%;
-
-            h1 {
-                font-size: 60px;
-
-                .title1 {
-                    color: #FF6F0F;
-                }
-
-=======
-      padding: 50px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      text-align: center;
-  
     //   h1.title {
     //     font-size: 3rem;
     //     margin-bottom: 20px;
     //   }
 
-      .title {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        justify-content: center;
-        // border: 2px solid red;
-        width: 600px;
-        position: absolute;
-        z-index: 999;
-        color: white;
-        top: 4%;
-        left: 31%;
+    .title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      justify-content: center;
+      // border: 2px solid red;
+      width: 600px;
+      position: absolute;
+      z-index: 999;
+      color: white;
+      top: 4%;
+      left: 31%;
 
-        h1 {
-            font-size: 60px;
-            .title1 {
-                color: #FF6F0F;
->>>>>>> 08d5fb0230467480f9c4d0e7b59caacd173f39d0
-            }
+      h1 {
+        font-size: 60px;
 
+        .title1 {
+          color: #FF6F0F;
         }
 
-<<<<<<< HEAD
-
-
-        .description {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            margin-top: 150px;
-            background-color: #0a0027;
-            padding: 30px;
-            border-radius: 40px;
-            margin-left: 100px;
-            width: 50vw;
-        }
-    }
-
-    .parallax__layer--base {
-        img {
-            width: 100%;
-            height: auto;
-        }
-=======
-    }
-
-    
-  
-      .description {
-        font-size: 1.2rem;
-        line-height: 1.5;
-        margin-top: 150px;
-        background-color: #0a0027;
-        padding: 30px;
-        border-radius: 80px;
-        width: 50vw;
       }
-    }
-  
-    .parallax__layer--base {
-      img {
-        width: 100%;
-        height: auto;
-      }
->>>>>>> 08d5fb0230467480f9c4d0e7b59caacd173f39d0
+
     }
 
-    .para {
-        display: inline-block;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        width: 40vw;
-        text-align: center;
-        justify-content: center;
+
+
+    .description {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-top: 150px;
+      background-color: #0a0027;
+      padding: 30px;
+      border-radius: 40px;
+      margin-left: 100px;
+      width: 50vw;
     }
-<<<<<<< HEAD
+  }
+
+  .parallax__layer--base {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .para {
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 40vw;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .main-body {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .ath {
-    position: absolute;
-    top: 210px;
-    right: 150px;
+  position: absolute;
+  top: 210px;
+  right: 150px;
 
-    img {
-        height: 420px;
-        width: 420px;
-    }
+  img {
+    height: 420px;
+    width: 420px;
+  }
 }
-=======
-  }
-  
-  .main-body {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .ath {
-    position: absolute;
-    top: 215px;
-    right: 160px;
-
-    img{
-        height: 420px;
-        width: 420px ;
-        border-radius: 150px;
-    }
-  }
->>>>>>> 08d5fb0230467480f9c4d0e7b59caacd173f39d0

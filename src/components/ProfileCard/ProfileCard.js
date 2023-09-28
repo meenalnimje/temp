@@ -1,12 +1,24 @@
 import React from "react";
+import "./ProfileCard.scss";
 function ProfileCard(props) {
   return (
-    <div className="profile-card">
-      <div className="container">
-        <img src={props?.info?.imgUrl} alt="image of persons/sponsors" />
-        <h2 className="name">{props?.info?.name ? props.info.name : " "}</h2>
+    <div className="container">
+      <div class="column">
+        <div class="card">
+          <div class="pro-pic">
+            <img src={props.info.img} alt={props.info.name} />
+          </div>
+          <div class="desciption-wrap">
+            <div class="description">
+              <h3>{props.info.name}</h3>
+              <h4>{props.info.por}</h4>
+              <h4>{props.info.email}</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+
 export default ProfileCard;

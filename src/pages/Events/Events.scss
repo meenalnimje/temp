@@ -1,9 +1,9 @@
 .events {
     height: 100%;
-    background-image: url("../../assets/demoPhotos/eventbg3.jpg");
+    background-image: url("../../assets/demoPhotos/eventbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: bottom;
 
 
     .heading {
@@ -12,7 +12,13 @@
         justify-content: center;
         width: 100%;
         align-items: center;
-        font-size: 36px;
+        font-size: 40px;
+
+        .h1 {
+            color: #FF6F0F;
+            margin-right: 10px;
+        }
+
         // position: relative;
     }
 

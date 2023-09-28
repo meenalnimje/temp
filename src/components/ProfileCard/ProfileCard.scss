@@ -1,0 +1,119 @@
+.container-profile {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 0 0 40%;
+}
+
+.card {
+    border: 1px solid;
+    height: 350px;
+    width: 350px;
+    position: relative;
+    background: #000;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    border-radius: 30px;
+}
+
+.card .desciption-wrap {
+    padding: 105px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .description {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 1.4;
+    transition: all 0.5s ease-out;
+    overflow-x: auto;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.card .description>* {
+    width: 100%;
+}
+
+.card .description h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.card .description h4 {
+    margin: 0;
+}
+
+.card .description ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card .description ul li {
+    display: inline-block;
+    width: 40px;
+    margin: 0 10px;
+    transition: all 0.3s ease-out;
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.card .description ul li:hover {
+    transform: perspective(1000px) rotateX(30deg);
+    transform-style: preserve-3d;
+}
+
+
+.pro-pic {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 350px;
+    height: 350px;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.5s ease-out;
+
+    img {
+        width: 100%;
+        // border: 2px solid red;
+        // border-radius: 100%;
+        border-radius: 30px;
+        height: 100%;
+    }
+}
+
+.card:hover .pro-pic {
+    transform: translate(-50%, 50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border-radius: 100%;
+
+    img {
+        border-radius: 100%;
+    }
+}
+
+.card:hover {
+    border-radius: 10px;
+}
+
+.card:hover .description {
+    transform: translateY(0%);
+    opacity: 1;
+}
