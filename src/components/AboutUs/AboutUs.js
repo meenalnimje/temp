@@ -2,6 +2,9 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import aboutus from "../../assets/demoPhotos/aboutus.jpg";
 import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
+import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png"
+import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png"
+import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp"
 import "./AboutUs.scss";
 function AboutUs() {
   return (
@@ -36,7 +39,8 @@ function AboutUs() {
             <div style={{ height: "60vh" }} />
           </div>
           <div className="ath">
-            <img src={ashvamedhalogo} alt="atheletes-image" />
+            <img src={tshirt} alt="tshirt" />
+            {/* <img src={ashvamedhalogo} alt="atheletes-image" /> */}
           </div>
         </div>
       </Parallax>
