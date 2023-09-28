@@ -4,25 +4,24 @@
         top: -80px;
 
         .content-hero {
+
             height: 100vh;
-            background-color: rgba(0, 0, 0, 1);
-            overflow: hidden;
 
             .wrapper.three {
                 background-color: transparent;
                 position: absolute;
                 top: 34%;
-                left: 34%;
+                left: 33.5%;
             }
 
             .three h3 {
-                // background: url("../../assets/demoPhotos/eventbg5.jpg");
-                // display: inline-flex;
-                font-size: 4.4rem;
-                // background-position: 0 0;
-                // background-clip: text;
-                // -webkit-text-fill-color: #ff000000;
-                // animation: animatedOne 1s linear infinite;
+                background: url("../../assets/demoPhotos/bg.webp");
+                display: inline-flex;
+                font-size: 4.5rem;
+                background-position: 0 0;
+                background-clip: text;
+                -webkit-text-fill-color: #ff000000;
+                animation: animatedOne 5s linear infinite;
 
                 .h1 {
                     color: #FF6F0F;
@@ -33,15 +32,15 @@
                 }
             }
 
-            // @keyframes animatedOne {
-            //     from {
-            //         background-position: 0 0;
-            //     }
+            @keyframes animatedOne {
+                from {
+                    background-position: 0 0;
+                }
 
-            //     to {
-            //         background-position: 100% 50%;
-            //     }
-            // }
+                to {
+                    background-position: 100% 100%;
+                }
+            }
 
             .description {
                 // border: 2px solid red;

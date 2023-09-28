@@ -9,33 +9,75 @@ const chiefCoordinator = {
   name: "Chief Coordinator",
   position: "Chief Coordinator",
   image: dummyProfilePhoto,
+  no: "+91 8449485116",
 };
 
 const teamMembers = [
   {
-    name: "Team Member 1",
-    position: "Position 1",
+    name: "Damtak Ligu",
+    position: "Publicity Co-ordinator",
     image: dummyProfilePhoto,
+    no: "+91 7630956265",
   },
   {
-    name: "Team Member 2",
-    position: "Position 2",
+    name: "Lonki",
+    position: "Events Co-ordinator",
     image: dummyProfilePhoto,
+    no: "+91 8135071971",
   },
   {
-    name: "Team Member 3",
-    position: "Position 3",
+    name: "Anurag Barman",
+    position: "Sponsorship Co-ordinator",
     image: dummyProfilePhoto,
+    no: "+91 7099537740",
   },
   {
-    name: "Team Member 4",
-    position: "Position 4",
+    name: "Meenal C Nimje",
+    position: "Web&D Co-ordinator",
     image: dummyProfilePhoto,
+    no: "+91 8591182265",
   },
   {
-    name: "Team Member 5",
-    position: "Position 5",
+    name: "Arihant Garg",
+    position: "Core Head",
     image: dummyProfilePhoto,
+    no: "+91 8448861199",
+  },
+  {
+    name: "Ayush Singh",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 7078421798",
+  },
+  {
+    name: "Natasha Mukherjee",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 9959533758",
+  },
+  {
+    name: "Ram",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 8328537734",
+  },
+  {
+    name: "Aditya Mishra",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 9343586835",
+  },
+  {
+    name: "Devesh Patodkar",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 8379957983",
+  },
+  {
+    name: "Piyush Mishra",
+    position: "Core Head",
+    image: dummyProfilePhoto,
+    no: "+91 9528790874",
   },
   // Add more team members here
 ];
@@ -44,29 +86,26 @@ function OurTeam() {
   return (
     <div className="OurTeam">
       <Navbar />
-      <h2 className="heading">OUR TEAM</h2>
+      <h2 className="heading">
+        <span className="h1">OUR</span>TEAM
+      </h2>
       <div className="team-container">
         <div className="cards">
           {/* Display Chief Coordinator outside the grid */}
-          <div className="team-member chief-coordinator">
-            <div
-              className="member-image"
-              style={{ backgroundImage: `url(${chiefCoordinator.image})` }}
-            ></div>
-            <div className="member-details">
+          <div className="ui-card chief-coordinator">
+            <img src={chiefCoordinator.image} alt="" />
+            <div className="description">
               <h3>{chiefCoordinator.name}</h3>
+              <h3>{chiefCoordinator.no}</h3>
               <p>{chiefCoordinator.position}</p>
             </div>
           </div>
-
           {teamMembers.map((member, index) => (
-            <div className="team-member" key={index}>
-              <div
-                className="member-image"
-                style={{ backgroundImage: `url(${member.image})` }}
-              ></div>
-              <div className="member-details">
+            <div className="ui-card" key={index}>
+              <img src={member.image} alt="" />
+              <div className="description">
                 <h3>{member.name}</h3>
+                <h3>{member.no}</h3>
                 <p>{member.position}</p>
               </div>
             </div>

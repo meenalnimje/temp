@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import badminton1 from "../../assets/demoPhotos/demo1.jpg";
+import badminton1 from "../../assets/finalPhotos/badminton1.JPG";
 import bb1 from "../../assets/finalPhotos/bb1.JPG";
 import chess5 from "../../assets/finalPhotos/chess5.JPG";
 import f1 from "../../assets/finalPhotos/f2.JPG";
-import tt2 from "../../assets/finalPhotos/tt2.JPG";
+import tt2 from "../../assets/finalPhotos/tt1.jpg";
 import vb2 from "../../assets/demoPhotos/demo1.jpg";
 import "./Hero.scss";
 import { useNavigate } from "react-router-dom";
 function Hero() {
   const navigate = useNavigate();
   const [currState, setCurrState] = useState(0);
-  const images = [badminton1, bb1, chess5, f1, tt2, vb2];
+  const images = [bb1, badminton1, chess5, f1, tt2, vb2];
   const bgImageStyle = {
     backgroundImage: `url(${images[currState]})`,
     backgroundPosition: "center",
@@ -49,7 +49,7 @@ function Hero() {
           </div>
           <div className="description">
             <p className="theme">GET YOUR GAME ON</p>
-            <p className="date">OCTOBER 28 - OCTOBER 29</p>
+            <p className="date">28-29 OCTOBER 2023</p>
             <p className="name">THE ANNUAL SPORTS FEST OF IIT BHUBHANESWAR</p>
             <div className="buttons">
               <div className="btn1">
