@@ -8,6 +8,7 @@ import Sponsors from "./pages/Sponsors/Sponsors";
 import SingleSport from "./pages/SingleSports/SingleSport";
 import Registration from "./pages/Registration/Registration";
 import PointDetails from "./pages/PointDetails/PointDetails";
+import OurTeam from "./pages/OurTeam/OurTeam";
 import { useSelector } from "react-redux";
 const override = {
   display: "block",
@@ -45,6 +46,7 @@ function App() {
         <Route path="/leaderboard/:collegename" element={<PointDetails />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/register" element={<Registration />} />
+        <Route path="/team" element={<OurTeam />} />
       </Routes>
     </div>
   );
