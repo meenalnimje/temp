@@ -1,12 +1,12 @@
 import React from "react";
 import { Parallax } from "react-parallax";
-import aboutus from "../../assets/demoPhotos/aboutus.jpg";
+//import aboutus from "../../assets/demoPhotos/aboutus.jpg";
+import aboutus from "../../assets/demoPhotos/bgimage.jpg";
 import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
 import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png"
 import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png"
 import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp"
 import "./AboutUs.scss";
-import athletes from "../../assets/demoPhotos/athletes.jpg";
 
 function AboutUs() {
   return (
@@ -20,6 +20,11 @@ function AboutUs() {
             </h1>
           </div>
           <div className="main-body">
+          <div className="logos">
+            <img src={iitbbslogo} alt="IIT Bhubaneswar" className="logo" />
+            <img src={ashvamedhalogo} alt="Asvamedha" className="logo" />
+            <img src={sportsCouncilLogo} alt="Sports Council" className="logo" />
+          </div>
             <div className="description">
               <p className="para">
                 Welcome to Asvamedha, IIT Bhubaneswar's annual sports fest. We
@@ -38,12 +43,10 @@ function AboutUs() {
                 unforgettable experience.
               </p>
             </div>
-            <div style={{ height: "60vh" }} />
           </div>
-          <div className="ath">
+        </div>
+        <div className="ath">
             <img src={tshirt} alt="tshirt" />
-            {/* <img src={ashvamedhalogo} alt="atheletes-image" /> */}
-          </div>
         </div>
       </Parallax>
     </div>
@@ -51,3 +54,4 @@ function AboutUs() {
 }
 
 export default AboutUs;
+
