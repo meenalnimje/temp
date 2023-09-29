@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./AboutUs.scss";
 
 import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
@@ -15,6 +16,18 @@ import iitbbs from "../../assets/demoPhotos/iitbbsLogo.png";
 import sportCouncil from "../../assets/demoPhotos/sportCouncil.png";
 import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp";
 
+=======
+import React from "react";
+import { Parallax } from "react-parallax";
+//import aboutus from "../../assets/demoPhotos/aboutus.jpg";
+import aboutus from "../../assets/demoPhotos/bgimage.jpg";
+import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
+import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png"
+import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png"
+import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp"
+import "./AboutUs.scss";
+
+>>>>>>> 0bb15bad2787975dccdb2f716412c207792f14c8
 function AboutUs() {
   const handleRedirect = (platform) => {
     let url;
@@ -50,12 +63,17 @@ function AboutUs() {
               <span className="title2"> US</span>
             </h1>
           </div>
+          <div className="logos">
+            <img src={sportCouncil} alt="" />
+            <img src={iitbbs} alt="" />
+            <img src={ashvamedha} alt="" />
+          </div>
           <div className="main-body">
-            <div className="logos">
-              <img src={iitbbs} alt="IIT Bhubaneswar" className="logo" />
-              <img src={ashvamedha} alt="Asvamedha" className="logo" />
-              <img src={sportCouncil} alt="Sports Council" className="logo" />
-            </div>
+          <div className="logos">
+            <img src={iitbbslogo} alt="IIT Bhubaneswar" className="logo" />
+            <img src={ashvamedhalogo} alt="Asvamedha" className="logo" />
+            <img src={sportsCouncilLogo} alt="Sports Council" className="logo" />
+          </div>
             <div className="description">
               <p className="para">
                 Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest. We
@@ -99,7 +117,7 @@ function AboutUs() {
           </div>
         </div>
         <div className="ath">
-          <img src={tshirt} alt="tshirt" />
+            <img src={tshirt} alt="tshirt" />
         </div>
       </Parallax>
     </div>
@@ -107,3 +125,4 @@ function AboutUs() {
 }
 
 export default AboutUs;
+

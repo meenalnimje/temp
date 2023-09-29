@@ -50,12 +50,12 @@ function AboutUs() {
               <span className="title2"> US</span>
             </h1>
           </div>
+          <div className="logos">
+            <img src={sportCouncil} alt="" />
+            <img src={iitbbs} alt="" />
+            <img src={ashvamedha} alt="" />
+          </div>
           <div className="main-body">
-            <div className="logos">
-              <img src={iitbbs} alt="IIT Bhubaneswar" className="logo" />
-              <img src={ashvamedha} alt="Asvamedha" className="logo" />
-              <img src={sportCouncil} alt="Sports Council" className="logo" />
-            </div>
             <div className="description">
               <p className="para">
                 Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest. We
@@ -96,10 +96,12 @@ function AboutUs() {
                 <CounterUp content="Events" number="10" image={event} />
               </div>
             </div>
+            <div style={{ height: "60vh" }} />
           </div>
-        </div>
-        <div className="ath">
-          <img src={tshirt} alt="tshirt" />
+          <div className="ath">
+            <img src={tshirt} alt="tshirt" />
+            {/* <img src={ashvamedhalogo} alt="atheletes-image" /> */}
+          </div>
         </div>
       </Parallax>
     </div>
