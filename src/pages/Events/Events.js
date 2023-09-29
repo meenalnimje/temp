@@ -57,7 +57,10 @@ function Events() {
   return (
     <div className="events">
       <Navbar />
-      <h2 className="heading">UPCOMING EVENTS</h2>
+      <h2 className="heading">
+        <span className="h1">UPCOMING </span>
+        <span className="h2">EVENTS</span>
+      </h2>
       <div className="event-container">
         <div className="cards">
           {sportsInfo.map((item) => (

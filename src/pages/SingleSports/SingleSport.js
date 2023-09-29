@@ -8,68 +8,102 @@ import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
 import Navbar from "../../components/Navbar/Navbar";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import { useNavigate, useParams } from "react-router-dom";
-import tt_rulebook from "../../doc/rulebook.pdf";
-import bb_rulebook from "../../doc/rulebook.pdf";
-import chess_rulebook from "../../doc/rulebook.pdf";
-import volleyball_rulebook from "../../doc/rulebook.pdf";
-import football_rulebook from "../../doc/rulebook.pdf";
-import badminton_rulebook from "../../doc/rulebook.pdf";
+import rulebook from "../../doc/rulebook.pdf";
 import "./SingleSport.scss";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 function SingleSport() {
   const params = useParams();
-  const navigate = useNavigate();
   const { sportid } = params;
   const [sport, setSport] = useState({});
   const [popUpOpen, setPopUpOpen] = useState(false);
+  function handleRegistration(sportName) {
+    const response = sportsInfo.find((item) => item.sportName === sportName);
+    window.open(response.registrationLink);
+  }
   const sportsInfo = [
     {
       id: 1,
       sportName: "Chess",
       imgUrl: chess1,
-      desc: "Engage your strategic mind and sharpen your mental prowess with the Chess event at Asvamedha. This classic game of intellect and foresight challenges players to outthink their opponents, foresee moves, and plan ahead. Whether you're a seasoned chess player or a beginner, this event offers an opportunity to showcase your tactical acumen and passion for the game.",
+      desc: "Chess, the game of intellect and strategy, challenges players to outthink their opponents, anticipate moves, and plan ahead. At the Ashvamedha Chess Championship, we celebrate this timeless battle of wits. Whether you're a seasoned player or just starting, join us for two days of intense competition and camaraderie.Information Regarding the event is given below.",
       date: "28th-29th October",
-      rulebook: chess_rulebook,
+      location: "SES Room No: 218,219",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      rulebook: rulebook,
+      poc: "Devesh Patodkar",
     },
     {
       id: 2,
       sportName: "Badminton",
       imgUrl: badminton,
-      desc: "Smash, rally, and compete in the thrilling Badminton event at Asvamedha. Bring your agility, reflexes, and precision to the court as you engage in fast-paced matches against fellow enthusiasts. Whether you're a singles champion or part of a doubles dream team, this event celebrates the spirit of friendly competition and sportsmanship.",
+      desc: "Badminton is a sport that demands speed, agility, and finesse. Whether you're smashing shuttlecocks or diving for a crucial save, the Ashvamedha Badminton Championship promises intense rallies and thrilling matches. Join us on the court for a birdie-tastic showdown.Information Regarding the event is given below.",
       date: "28th-29th October",
-      rulebook: badminton_rulebook,
+      location: "Inside SAC Badminton Court 1,2",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      rulebook: rulebook,
+      poc: "Pranav P",
     },
     {
       id: 3,
       sportName: "Volleyball",
       imgUrl: volleyball1,
-      desc: "Bump, set, and spike your way to victory in the Volleyball event at Asvamedha. Assemble your team and showcase your teamwork, communication, and athleticism on the sand court. With every serve and every block, you'll demonstrate your dedication to the game and your commitment to collaborative excellence.",
+      desc: "Volleyball is a dynamic team sport that demands coordination, agility, and teamwork. Whether you're spiking, blocking, or diving for a save, it's all about the thrill of the game. Join us for a spirited match at Ashvamedha Sports Arena.Information Regarding the event is given below.",
       date: "28th-29th October",
-      rulebook: volleyball_rulebook,
+      location: "Volleyball Court 1,2",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      rulebook: rulebook,
+      poc: "Justa Tirkey",
     },
     {
       id: 4,
       sportName: "Football",
       imgUrl: football1,
-      desc: "Get ready to kick up some excitement in the Football event at Asvamedha. Lace up your cleats, strategize with your teammates, and exhibit your skills in this high-energy sport. From precision passes to powerful shots on goal, the football event promises adrenaline-pumping action and a chance to revel in the camaraderie of the beautiful game.",
+      desc: "Football, the world's most beloved sport, unites people through the joy of scoring goals and making breathtaking saves. At Ashvamedha, we bring the football community together for a thrilling tournament filled with skill, passion, and unforgettable moments.Information Regarding the event is given below.",
       date: "28th-29th October",
-      rulebook: football_rulebook,
+      location: "Football Ground",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      rulebook: rulebook,
+      poc: "Megha Shyam",
     },
     {
       id: 5,
       sportName: "Basketball",
       imgUrl: basketball,
-      desc: "Dribble, shoot, and score in the Basketball event at Asvamedha. Take to the court with your team to demonstrate your agility, coordination, and strategic thinking. Whether you're making slam dunks or nailing three-pointers, this event combines athleticism and finesse in an electrifying showcase of hoops talent.",
+      desc: "Basketball is a fast-paced, high-flying game of strategy and skill. Dribble, pass, and shoot your way to victory in the Ashvamedha Basketball Championship. Join us on the court for slam dunks and three-pointers that will leave you in awe.Information Regarding the event is given below.",
       date: "28th-29th October",
-      rulebook: bb_rulebook,
+      location: "Basketball Court 1,2",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      rulebook: rulebook,
+      poc: "Ayush Singh & Pranav P",
     },
     {
       id: 6,
       sportName: "Table Tennis",
       imgUrl: tabletennis,
-      desc: "Rally and spin your way through the Table Tennis event at Asvamedha. Grab your paddle and engage in lightning-fast matches that require quick reflexes and impeccable hand-eye coordination. Whether you're a seasoned ping pong pro or a casual player, this event offers a platform to exhibit your precision and love for the sport.",
+      desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
+      location: "Inside SAC Multi-Purpose Hall",
       date: "28th-29th October",
-      rulebook: tt_rulebook,
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      poc: "Jatin Sahu",
+      rulebook: rulebook,
+    },
+    {
+      id: 7,
+      sportName: "Lawn Tennis",
+      imgUrl: tabletennis,
+      desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
+      location: "Lawn Tennis Court 1,2",
+      date: "28th-29th October",
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+      poc: "Ashvarth",
+      rulebook: rulebook,
     },
   ];
   useEffect(() => {
@@ -98,22 +132,28 @@ function SingleSport() {
             />
           )}
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="sports-img">
             <img src={sport.imgUrl} alt="ATHLETICS EVENTS" />
           </div>
           <div className="sports-info">
             <h1 className="name">{sport.sportName}</h1>
             <p className="desc">{sport.desc}</p>
-            <h2 className="date">DATE: 28TH-29TH OCTOBER</h2>
+            <p className="poc">
+              <span className="highlight">Person of Contact:</span> {sport.poc}
+            </p>
+            <p className="venue">
+              <span className="highlight">Location:</span> {sport.location}
+            </p>
+            <p className="date">
+              <span className="highlight">Date:</span> {sport.date}
+            </p>
             <a className="rulebook" href={sport.rulebook} download="Rulebook">
-              Rulebook : Click here
+              <span className="highlight">Rulebook:</span> Click here
             </a>
             <button
               className="register-btn"
-              onClick={() => {
-                navigate("/register");
-              }}
+              onClick={() => handleRegistration(sport.sportName)}
             >
               Register Now
             </button>

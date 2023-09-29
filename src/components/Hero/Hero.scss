@@ -4,24 +4,42 @@
         margin-top: -80px;
 
         .content-hero {
+
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.7);
-            overflow: hidden;
 
-            .title {
+            .wrapper.three {
+                background-color: transparent;
                 position: absolute;
-                top: 33%;
-                left: 36%;
-                font-size: 60px;
+                top: 34%;
+                left: 33.5%;
+            }
 
-                .title1 {
+            .three h3 {
+                background: url("../../assets/demoPhotos/bg.webp");
+                display: inline-flex;
+                font-size: 4.5rem;
+                background-position: 0 0;
+                background-clip: text;
+                -webkit-text-fill-color: #ff000000;
+                animation: animatedOne 5s linear infinite;
+
+                .h1 {
                     color: #FF6F0F;
                 }
 
-                .title2 {
+                .h2 {
                     color: white;
                 }
+            }
 
+            @keyframes animatedOne {
+                from {
+                    background-position: 0 0;
+                }
+
+                to {
+                    background-position: 100% 100%;
+                }
             }
 
             .description {
