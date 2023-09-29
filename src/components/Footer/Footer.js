@@ -1,9 +1,12 @@
-import React from "react";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { HiLocationMarker } from "react-icons/hi";
-import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
-import { BiSolidPhoneCall, BiCopyright } from "react-icons/bi";
 import "./Footer.scss";
+
+import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
+import { BiCopyright, BiSolidPhoneCall } from "react-icons/bi";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+
+import { HiLocationMarker } from "react-icons/hi";
+import React from "react";
+
 function Footer() {
   const handleRedirect = (platform) => {
     let url;
@@ -41,13 +44,13 @@ function Footer() {
             <h2 className="desc">The Annual Sports fest of IIT Bhubaneswar</h2>
             <div className="social-media">
               <div className="icons" onClick={() => handleRedirect(1)}>
-                <AiOutlineInstagram />
+                <AiOutlineInstagram className="icon" />
               </div>
               <div className="icons" onClick={() => handleRedirect(2)}>
-                <FaFacebookF />
+                <FaFacebookF className="icon" />
               </div>
               <div className="icons" onClick={() => handleRedirect(3)}>
-                <FaLinkedinIn />
+                <FaLinkedinIn className="icon" />
               </div>
             </div>
           </div>

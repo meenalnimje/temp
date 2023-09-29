@@ -14,22 +14,15 @@
                 left: 33.5%;
             }
 
-            .three h3 {
+            .three p {
                 background: url("../../assets/demoPhotos/bg.webp");
                 display: inline-flex;
                 font-size: 4.5rem;
+                font-weight: 1000;
                 background-position: 0 0;
                 background-clip: text;
                 -webkit-text-fill-color: #ff000000;
                 animation: animatedOne 5s linear infinite;
-
-                .h1 {
-                    color: #FF6F0F;
-                }
-
-                .h2 {
-                    color: white;
-                }
             }
 
             @keyframes animatedOne {
@@ -54,6 +47,7 @@
                 color: white;
 
                 p {
+                    font-weight: 700;
                     margin-bottom: 10px;
                     font-size: 24px;
                 }
@@ -140,14 +134,14 @@
 
 @media only screen and (max-width: 960px) {}
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 350px) {
     .hero {
         .container {
             display: flex;
             justify-content: center;
             // flex-direction: column;
             align-items: center;
-            border: 2px solid yellow;
+            // border: 2px solid yellow;
             width: 100%;
 
             .content-hero {
@@ -155,32 +149,45 @@
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
+                border: 2px solid orange;
+
                 // align-items: start;
                 // justify-content: start;
-
-                .title {
+                .wrapper.three {
+                    background-color: transparent;
                     position: absolute;
-                    top: 100px;
-                    left: 15%;
+                    top: 27%;
                     width: 100%;
-                    // height: 30px;
+                    left: 6%;
+                    // border: 2px solid red;
+                }
 
-                    .title1,
-                    .title2 {
-                        font-size: 30px;
+                .three {
+                    position: absolute;
+                    top: 200px;
+                    left: 5%;
+                    // border: 2px solid red;
+                    width: 100%;
+
+                    p {
+                        font-size: 36px;
+                        font-weight: 700;
                     }
                 }
 
                 .description {
                     position: absolute;
-                    top: 200px;
+                    top: 40%;
                     left: 15%;
                     width: 70%;
                     // // color: white;
-                    // border: 2px solid red;
 
                     p {
-                        font-size: 16px;
+                        // border: 2px solid red;
+                        // color: #030027;
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 700;
                         text-align: center;
                     }
 

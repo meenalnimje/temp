@@ -1,34 +1,55 @@
 .AboutUs {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: -80px;
-  // border: 2px solid red;
+  border: 2px solid red;
 }
 
 .AboutUs {
-  .content {
+  .content-about {
     padding: 50px;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
-    text-align: center;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    //   h1.title {
-    //     font-size: 3rem;
-    //     margin-bottom: 20px;
-    //   }
+    .logos {
+      height: 450px;
+      margin-top: 30px;
+      width: 100%;
+      // border: 2px solid red;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        margin: 10px;
+        width: 25%;
+        height: 80%;
+
+      }
+    }
 
     .title {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      justify-content: center;
+      font-size: 2.5rem;
+      // margin-bottom: 20px;
+      // justify-content: center;
       // border: 2px solid red;
-      width: 600px;
-      position: absolute;
-      z-index: 999;
-      color: white;
-      top: 4%;
-      left: 31%;
+      width: 50%;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // width: 600px;
+      // position: absolute;
+      // z-index: 999;
+      // color: white;
+      // top: 4%;
+      // left: 31%;
 
       h1 {
         font-size: 60px;
@@ -42,49 +63,132 @@
     }
 
 
+    .main-body {
 
-    .description {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-top: 150px;
-      background-color: #0a0027;
-      padding: 30px;
-      border-radius: 40px;
-      margin-left: 100px;
-      width: 50vw;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .description {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-top: 60px;
+        background-color: #0a0027;
+        border: 2px solid red;
+        height: 435px;
+        width: 70%;
+        padding-top: 30px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+
+        .social-media {
+          // display: flex;
+          // border: 2px solid red;
+          // width: 50%;
+          // height: 80px;
+          // margin-top: 20px;
+          // justify-content: space-around;
+          // align-items: center;
+          position: absolute;
+          width: 60px;
+          height: 100%;
+          top: 0%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          z-index: 999;
+          // border: 1px solid red;
+          left: 10px;
+          // box-shadow: 2px 5px 10px rgba(0, 0, 0, .6);
+
+          .icons {
+            border: 2px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+            cursor: pointer;
+            // new
+            height: 50px;
+            position: relative;
+
+            &:nth-child(2) {
+              background: #3b5998;
+            }
+
+            &:nth-child(1) {
+              background: #f9ce34;
+            }
+
+            &:nth-child(3) {
+              background: #00aced;
+            }
+
+            .icon {
+              color: #fff;
+              display: block;
+              width: 100%;
+              height: 100%;
+              line-height: 50px;
+              border-bottom: 1px solid #ffffff;
+              padding-left: 20px;
+
+            }
+
+            &:hover {
+              border: 2px solid rgb(255, 255, 255);
+              background: white;
+            }
+          }
+        }
+
+        // margin-left: 100px;
+        .para {
+          display: inline-block;
+          margin-top: 25px;
+          margin-bottom: 25px;
+          width: 40vw;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+
+      .count {
+        display: flex;
+        // border: 2px solid red;
+        align-items: center;
+        justify-content: space-around;
+        width: 70%;
+        margin-top: 60px;
+      }
     }
+
   }
 
-  .parallax__layer--base {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .para {
-    display: inline-block;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 40vw;
-    text-align: center;
-    justify-content: center;
-  }
 }
 
 .main-body {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+  // width: 100vw;
+  // display: flex;
+  // flex-direction: column;
 }
 
 .ath {
-  position: absolute;
-  top: 210px;
-  right: 150px;
+  // position: absolute;
+  // top: 210px;
+  // right: 150px;
 
   img {
-    height: 420px;
-    width: 420px;
+    // height: 420px;
+    // width: 420px;
   }
 }

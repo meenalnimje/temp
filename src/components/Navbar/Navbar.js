@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-scroll";
-import ashvamedhaLogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
-import { AiOutlineMenu } from "react-icons/ai";
-import { VscClose } from "react-icons/vsc";
 import "./Navbar.scss";
+
+import React, { useState } from "react";
+
+import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll";
+import { VscClose } from "react-icons/vsc";
+import ashvamedhaLogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
   const menuData = [
     {

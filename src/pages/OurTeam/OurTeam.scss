@@ -103,3 +103,101 @@
       }
     }
   }
+
+  @media screen and (max-width:350px) {
+    .OurTeam {
+
+      .heading {
+        margin-top: 20px;
+
+        .h1 {}
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 100px;
+
+        .cards {
+          display: grid;
+          gap: 60px;
+          grid-template-columns: repeat(1, 1fr);
+
+          .ui-card {
+            // width: 350px;
+            // border: 2px solid red;
+            width: 280px;
+            // height: 300px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+          }
+
+          .ui-card img {
+            transform: scale(1);
+            transition: all 0.3s ease-out;
+          }
+
+          .ui-card:hover img {
+            transform: scale(1.1) translateY(-20px);
+            opacity: 0.3
+          }
+
+          .ui-card .description {
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            // border: 2px solid red;
+            font-size: 18px;
+          }
+
+          .ui-card .description h3 {
+            font-weight: 700;
+            font-size: 32px;
+            margin: 0 0 20px;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+
+          }
+
+          .ui-card .description p {
+            color: #FF6F0F;
+            font-size: 24px;
+          }
+
+          .ui-card:hover .description h3 {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+
+          .ui-card:hover .description p {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+
+        }
+
+        .chief-coordinator {
+          background-color: #ffa500;
+          color: white;
+          border: 2px solid white;
+          border-radius: 10%;
+          margin-top: 30px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .team-container .cards {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          }
+        }
+      }
+    }
+  }

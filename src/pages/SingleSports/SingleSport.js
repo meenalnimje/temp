@@ -1,16 +1,19 @@
+import "./SingleSport.scss";
+
 import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import { AiOutlineDoubleRight } from "react-icons/ai";
+import Navbar from "../../components/Navbar/Navbar";
+import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assets/eventsPhoto/badminton.jpg";
+import basketball from "../../assets/eventsPhoto/basketball.jpg";
 import chess1 from "../../assets/eventsPhoto/chess1.jpg";
 import football1 from "../../assets/eventsPhoto/football1.jpg";
-import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
-import basketball from "../../assets/eventsPhoto/basketball.jpg";
-import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
-import Navbar from "../../components/Navbar/Navbar";
-import { AiOutlineDoubleRight } from "react-icons/ai";
-import { useNavigate, useParams } from "react-router-dom";
 import rulebook from "../../doc/rulebook.pdf";
-import "./SingleSport.scss";
-import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
+import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
+import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
+
 function SingleSport() {
   const params = useParams();
   const { sportid } = params;

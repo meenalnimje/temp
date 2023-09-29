@@ -43,3 +43,44 @@
         font-size: 18px;
     }
 }
+
+@media screen and (max-width:350px) {
+    .collegewrapper {
+        border: 2px solid red;
+
+        .serial-no {
+            // border: 2px solid red;
+            width: 20%;
+            // flex: 1;
+        }
+
+        .collegename {
+            // border: 2px solid red;
+            text-transform: uppercase;
+            width: 50%;
+
+        }
+
+        .score {
+            width: 10%;
+
+        }
+
+        .next {
+            width: 10%;
+            // border: 2px solid red;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .serial-no,
+        .collegename,
+        .score {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+    }
+}

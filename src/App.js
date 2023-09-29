@@ -1,14 +1,18 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+
+import Cursor from "./components/Cursor/Cursor";
 import Events from "./pages/Events/Events";
+import Home from "./pages/Home/Home";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
-import Sponsors from "./pages/Sponsors/Sponsors";
-import SingleSport from "./pages/SingleSports/SingleSport";
-import PointDetails from "./pages/PointDetails/PointDetails";
 import OurTeam from "./pages/OurTeam/OurTeam";
+import PointDetails from "./pages/PointDetails/PointDetails";
+import SingleSport from "./pages/SingleSports/SingleSport";
+import Sponsors from "./pages/Sponsors/Sponsors";
+
 function App() {
   return (
     <div className="App">
+      <Cursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />

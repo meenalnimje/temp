@@ -1,5 +1,7 @@
-import React from "react";
 import "./PointInfo.scss";
+
+import React from "react";
+
 function PointInfo(props) {
   return (
     <div className="pointinfo">
@@ -10,7 +12,7 @@ function PointInfo(props) {
         <span className="name">{props?.gameInfo?.college1}</span>
       </div>
       <div className="point">Point: {props?.gameInfo?.point}</div>
-      <div className="sportname">Sport Name: {props?.gameInfo?.sportName}</div>
+      <div className="sportname">Sport: {props?.gameInfo?.sportName}</div>
     </div>
   );
 }

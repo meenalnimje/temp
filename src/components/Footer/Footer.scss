@@ -145,7 +145,9 @@
             }
 
             .part2 {
-                .bottom {}
+                .bottom {
+                    margin-left: 0px;
+                }
             }
         }
     }
@@ -174,7 +176,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    padding-left: 30px;
+                    padding-left: 15px;
                     height: 100%;
                     font-size: 18px;
                     width: 100%;
@@ -241,6 +243,85 @@
                 justify-content: center;
 
                 .bottom {}
+            }
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .footer {
+
+        .container {
+
+            .part1 {
+
+                .left {
+                    padding-left: 15px;
+                    // border: 2px solid red;
+
+                    .title {
+                        // display: flex;
+                        // justify-content: start;
+                        // align-items: start;
+                        // border: 2px solid red;
+                        // padding-right: 30px;
+                        padding-top: 20px;
+                        padding-left: 10px;
+                    }
+
+                    .social-media {
+                        // border: 2px soild red;
+                        width: 55%;
+
+                        .icons {}
+                    }
+                }
+
+                .right {
+                    // border: 2px solid red;
+                    margin-top: 10px;
+                    position: absolute;
+                    padding-left: 15px;
+                    top: 35%;
+                    width: 100%;
+                    left: 0;
+                    padding-top: 20px;
+
+                    p {
+                        color: rgb(161, 177, 191);
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-right: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            // border: 2px solid red;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .part2 {
+                border: 2px solid white;
+                width: 100%;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+
+                .bottom {
+                    border: 2px solid red;
+                    width: 100%;
+                    margin-left: 0;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
             }
         }
     }

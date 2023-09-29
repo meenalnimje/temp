@@ -1,12 +1,15 @@
+import "./Hero.scss";
+
 import React, { useEffect, useState } from "react";
+
 import badminton1 from "../../assets/finalPhotos/badminton1.JPG";
 import bb1 from "../../assets/finalPhotos/bb1.JPG";
 import chess5 from "../../assets/finalPhotos/chess5.JPG";
 import f1 from "../../assets/finalPhotos/f2.JPG";
 import tt2 from "../../assets/finalPhotos/tt1.jpg";
-import vb2 from "../../assets/demoPhotos/demo1.jpg";
-import "./Hero.scss";
 import { useNavigate } from "react-router-dom";
+import vb2 from "../../assets/demoPhotos/demo1.jpg";
+
 function Hero() {
   const navigate = useNavigate();
   const [currState, setCurrState] = useState(0);
@@ -17,11 +20,11 @@ function Hero() {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100%",
-    transition: "all ease-in-out 2s",
+    transition: "all ease-in-out 4s",
     objectFit: "contain",
     opacity: "1",
     filter: " blur(2px)",
-    webkitFilter: "blur(1px)",
+    webkitFilter: "blur(2px)",
   };
   const goToNext = (currState) => {
     setCurrState(currState);
@@ -42,10 +45,7 @@ function Hero() {
         <div className="content-hero">
           <div style={bgImageStyle}></div>
           <div className="wrapper three">
-            <h3>
-              <span className="h1">ASHVA</span>
-              <span className="h2">MEDHA-23</span>
-            </h3>
+            <p>ASHVAMEDHA-23</p>
           </div>
           <div className="description">
             <p className="theme">GET YOUR GAME ON</p>

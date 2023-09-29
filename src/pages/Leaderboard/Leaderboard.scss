@@ -33,3 +33,24 @@
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     }
 }
+
+@media screen and (max-width:350px) {
+    .leaderboard {
+
+        .heading {
+            font-size: 24px;
+            margin: 10px;
+            width: 100%;
+            // border: 2px solid  red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content {
+            width: 90%;
+            
+        }
+    }
+}

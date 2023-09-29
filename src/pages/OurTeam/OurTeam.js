@@ -1,12 +1,13 @@
-import React from "react";
 import "./OurTeam.scss";
-import Navbar from "../../components/Navbar/Navbar";
+
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import React from "react";
 import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
 
 // Sample team data
 const chiefCoordinator = {
-  name: "Chief Coordinator",
+  name: "Deepanshu Choudhary",
   position: "Chief Coordinator",
   image: dummyProfilePhoto,
   no: "+91 8449485116",
@@ -20,7 +21,7 @@ const teamMembers = [
     no: "+91 7630956265",
   },
   {
-    name: "Lonki",
+    name: "Sarlongki",
     position: "Events Co-ordinator",
     image: dummyProfilePhoto,
     no: "+91 8135071971",

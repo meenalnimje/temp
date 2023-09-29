@@ -175,7 +175,7 @@
     }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 350px) {
     .navbar {
         // border: 2px solid red;
 
@@ -194,15 +194,14 @@
 
                 .nav-menu {
                     width: 100%;
-                    right: 0;
+                    right: -20%;
                     top: -100%;
                     height: 100%;
-                    border: 2px solid red;
                     border-radius: 10px;
                     display: flex;
+                    border: 2px solid red;
                     flex-direction: column;
                 }
-
                 .menu-bar {
                     font-size: 3rem;
                     background: none;
