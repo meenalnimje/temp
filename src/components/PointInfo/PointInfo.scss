@@ -53,6 +53,62 @@
 
 }
 
+@media screen and (max-width:450px) {
+    .pointinfo {
+        margin: 10px;
+        width: 100%;
+        height: 100px;
+        text-transform: lowercase;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .serial-no {
+            width: 10%;
+            margin-left: 10px;
+            // border: 2px solid wheat;
+        }
+
+        .category {
+
+            width: 20%;
+        }
+
+        .opponent {
+
+            // border: 2px solid wheat;
+            width: 20%;
+
+            .name {
+                margin-left: 5px;
+            }
+        }
+
+        .point {
+            width: 20%;
+            // border: 2px solid wheat;
+
+        }
+
+        .sportname {
+            width: 30%;
+        }
+
+        .serial-no,
+        .category,
+        .opponent,
+        .point,
+        .sportname {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+
+    }
+}
+
 @media screen and (max-width:350px) {
     .pointinfo {
         margin: 10px;

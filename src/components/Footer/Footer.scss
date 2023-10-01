@@ -30,7 +30,7 @@
                     font-size: 2.5rem;
 
                     .p1 {
-                        color: #FF6F0F;
+                        color: #FF6D02;
                     }
                 }
 
@@ -107,53 +107,7 @@
     }
 }
 
-@media only screen and (max-width: 960px) {
-    .footer {
-
-        // border: 2px solid red;
-        // width: 100%;
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .part1 {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                margin: auto;
-                // border: 2px solid red;
-                width: 100%;
-
-                .left {
-                    // border: 2px solid red;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding-left: 30px;
-                }
-
-                .right {
-                    margin-top: 10px;
-                    position: absolute;
-                    padding-left: 30px;
-                    top: 45%;
-                    left: 0;
-                    padding-bottom: 12px;
-                }
-            }
-
-            .part2 {
-                .bottom {
-                    margin-left: 0px;
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 450px) {
     .footer {
 
         // border: 2px solid red;
@@ -184,12 +138,12 @@
                     flex-direction: column;
 
                     .title {
-                        font-size: 20px;
+                        font-size: 24px;
                         position: absolute;
                         top: 0;
                         left: 0;
                         padding-top: 20px;
-                        padding-left: 30px;
+                        padding-left: 15px;
                     }
 
                     .desc {
@@ -228,8 +182,9 @@
                 .right {
                     margin-top: 10px;
                     position: absolute;
-                    padding-left: 30px;
+                    padding-left: 15px;
                     top: 40%;
+                    width: 100%;
                     left: 0;
                     padding-bottom: 12px;
                     // border: 2px solid white;
@@ -237,12 +192,13 @@
             }
 
             .part2 {
-                border: 2px solid red;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                .bottom {}
+                .bottom {
+                    margin-left: 0px;
+                }
             }
         }
     }
@@ -309,9 +265,6 @@
             .part2 {
                 border: 2px solid white;
                 width: 100%;
-                // display: flex;
-                // justify-content: center;
-                // align-items: center;
 
                 .bottom {
                     border: 2px solid red;

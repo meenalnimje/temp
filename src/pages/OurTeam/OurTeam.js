@@ -6,12 +6,14 @@ import React from "react";
 import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
 
 // Sample team data
-const chiefCoordinator = {
-  name: "Deepanshu Choudhary",
-  position: "Chief Coordinator",
-  image: dummyProfilePhoto,
-  no: "+91 8449485116",
-};
+const chiefCoordinator = [
+  {
+    name: "Deepanshu Choudhary",
+    position: "Chief Coordinator",
+    image: dummyProfilePhoto,
+    no: "+91 8449485116",
+  },
+];
 
 const teamMembers = [
   {
@@ -28,7 +30,7 @@ const teamMembers = [
   },
   {
     name: "Anurag Barman",
-    position: "Sponsorship Co-ordinator",
+    position: "Sponsor Co-ordinator",
     image: dummyProfilePhoto,
     no: "+91 7099537740",
   },
@@ -38,6 +40,8 @@ const teamMembers = [
     image: dummyProfilePhoto,
     no: "+91 8591182265",
   },
+];
+const corehead = [
   {
     name: "Arihant Garg",
     position: "Core Head",
@@ -57,7 +61,7 @@ const teamMembers = [
     no: "+91 9959533758",
   },
   {
-    name: "Ram",
+    name: "Ram Reddy",
     position: "Core Head",
     image: dummyProfilePhoto,
     no: "+91 8328537734",
@@ -88,29 +92,54 @@ function OurTeam() {
     <div className="OurTeam">
       <Navbar />
       <h2 className="heading">
-        <span className="h1">OUR</span>TEAM
+        <span className="h1">OUR</span>
+        <span className="h2"> TEAM</span>
       </h2>
       <div className="team-container">
         <div className="cards">
           {/* Display Chief Coordinator outside the grid */}
-          <div className="ui-card chief-coordinator">
-            <img src={chiefCoordinator.image} alt="" />
-            <div className="description">
-              <h3>{chiefCoordinator.name}</h3>
-              <h3>{chiefCoordinator.no}</h3>
-              <p>{chiefCoordinator.position}</p>
-            </div>
-          </div>
-          {teamMembers.map((member, index) => (
-            <div className="ui-card" key={index}>
-              <img src={member.image} alt="" />
-              <div className="description">
-                <h3>{member.name}</h3>
-                <h3>{member.no}</h3>
-                <p>{member.position}</p>
+          <div className="chief-coordinator">
+            {chiefCoordinator.map((member, index) => (
+              <div className="card" key={index}>
+                <div className="image">
+                  <img src={member.image} alt="" />
+                </div>
+                <div className="description">
+                  <p>{member.position}</p>
+                  <h3 className="name">{member.name}</h3>
+                  <h3>{member.no}</h3>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="coordinator">
+            {teamMembers.map((member, index) => (
+              <div className="card" key={index}>
+                <div className="image">
+                  <img src={member.image} alt="" />
+                </div>
+                <div className="description">
+                  <p>{member.position}</p>
+                  <h3 className="name">{member.name}</h3>
+                  <h3>{member.no}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="coreheads">
+            {corehead.map((member, index) => (
+              <div className="card" key={index}>
+                <div className="image">
+                  <img src={member.image} alt="" />
+                </div>
+                <div className="description">
+                  <p>{member.position}</p>
+                  <h3 className="name">{member.name}</h3>
+                  <h3>{member.no}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

@@ -1,56 +1,74 @@
-import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import "./Events.scss";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import Footer from "../../components/Footer/Footer";
-import SportsCard from "../../components/SportsCard/SportsCard";
+import Navbar from "../../components/Navbar/Navbar";
+import React from "react";
 import badminton from "../../assets/eventsPhoto/badminton.jpg";
+import basketball from "../../assets/eventsPhoto/basketball.jpg";
 import chess1 from "../../assets/eventsPhoto/chess1.jpg";
 import football1 from "../../assets/eventsPhoto/football1.jpg";
-import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
-import basketball from "../../assets/eventsPhoto/basketball.jpg";
+import lt from "../../assets/eventsPhoto/lt.jpg";
 import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
-import "./Events.scss";
+import { useNavigate } from "react-router-dom";
+import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
+
 function Events() {
+  const navigate = useNavigate();
   const sportsInfo = [
     {
       id: 1,
       sportName: "Chess",
       imgUrl: chess1,
-      desc: "Engage your strategic mind and sharpen your mental prowess with the Chess event at Asvamedha. This classic game of intellect and foresight challenges players to outthink their opponents, foresee moves, and plan ahead. Whether you're a seasoned chess player or a beginner, this event offers an opportunity to showcase your tactical acumen and passion for the game.",
+      desc: "Chess is the art of thinking ahead, of making complex decisions under pressure",
       date: "28th-29th October",
     },
     {
       id: 2,
       sportName: "Badminton",
       imgUrl: badminton,
-      desc: "Smash, rally, and compete in the thrilling Badminton event at Asvamedha. Bring your agility, reflexes, and precision to the court as you engage in fast-paced matches against fellow enthusiasts. Whether you're a singles champion or part of a doubles dream team, this event celebrates the spirit of friendly competition and sportsmanship.",
+      desc: "Badminton is not only about winning. It's about playing beautiful, memorable games.",
       date: "28th-29th October",
     },
     {
       id: 3,
       sportName: "Volleyball",
       imgUrl: volleyball1,
-      desc: "Bump, set, and spike your way to victory in the Volleyball event at Asvamedha. Assemble your team and showcase your teamwork, communication, and athleticism on the sand court. With every serve and every block, you'll demonstrate your dedication to the game and your commitment to collaborative excellence.",
+      desc: "Success in volleyball comes not from individual glory but from seamless teamwork",
       date: "28th-29th October",
     },
     {
       id: 4,
       sportName: "Football",
       imgUrl: football1,
-      desc: "Get ready to kick up some excitement in the Football event at Asvamedha. Lace up your cleats, strategize with your teammates, and exhibit your skills in this high-energy sport. From precision passes to powerful shots on goal, the football event promises adrenaline-pumping action and a chance to revel in the camaraderie of the beautiful game.",
+      desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "28th-29th October",
     },
     {
       id: 5,
       sportName: "Basketball",
       imgUrl: basketball,
-      desc: "Dribble, shoot, and score in the Basketball event at Asvamedha. Take to the court with your team to demonstrate your agility, coordination, and strategic thinking. Whether you're making slam dunks or nailing three-pointers, this event combines athleticism and finesse in an electrifying showcase of hoops talent.",
+      desc: "Basketball is like photography. If you don't focus, all you have is the negative.",
       date: "28th-29th October",
     },
     {
       id: 6,
       sportName: "Table Tennis",
       imgUrl: tabletennis,
-      desc: "Rally and spin your way through the Table Tennis event at Asvamedha. Grab your paddle and engage in lightning-fast matches that require quick reflexes and impeccable hand-eye coordination. Whether you're a seasoned ping pong pro or a casual player, this event offers a platform to exhibit your precision and love for the sport.",
+      desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
+      date: "28th-29th October",
+    },
+    {
+      id: 7,
+      sportName: "Lawn Tennis",
+      imgUrl: lt,
+      desc: "Tennis is mostly mental. You win or lose the match before you even go out there.",
       date: "28th-29th October",
     },
   ];
@@ -62,11 +80,57 @@ function Events() {
         <span className="h2">EVENTS</span>
       </h2>
       <div className="event-container">
-        <div className="cards">
+        {/* <div className="cards">
           {sportsInfo.map((item) => (
             <SportsCard info={item} key={item.id} />
           ))}
         </div>
+         */}
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
+          {sportsInfo.map((item) => (
+            <SwiperSlide
+              className="ui-card"
+              onClick={() => navigate(`/events/${item.id}`)}
+            >
+              <img src={item.imgUrl} alt="" />
+              <div class="description">
+                <h3>{item.sportName}</h3>
+                <p className="desc">"{item.desc}"</p>
+                <button className="btn-primary">Register now</button>
+              </div>
+            </SwiperSlide>
+          ))}
+
+          <div className="slider-controler">
+            <div className="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div className="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div className="swiper-pagination"></div>
+          </div>
+        </Swiper>
       </div>
       <Footer />
     </div>

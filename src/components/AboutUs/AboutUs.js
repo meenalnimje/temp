@@ -1,12 +1,12 @@
-import React from "react";
+import "./AboutUs.scss";
+
 import { Parallax } from "react-parallax";
-//import aboutus from "../../assets/demoPhotos/aboutus.jpg";
+import React from "react";
 import aboutus from "../../assets/demoPhotos/bgimage.jpg";
 import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
-import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png"
-import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png"
-import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp"
-import "./AboutUs.scss";
+import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png";
+import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png";
+import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp";
 
 function AboutUs() {
   return (
@@ -20,14 +20,18 @@ function AboutUs() {
             </h1>
           </div>
           <div className="main-body">
-          <div className="logos">
-            <img src={iitbbslogo} alt="IIT Bhubaneswar" className="logo" />
-            <img src={ashvamedhalogo} alt="Asvamedha" className="logo" />
-            <img src={sportsCouncilLogo} alt="Sports Council" className="logo" />
-          </div>
+            <div className="logos">
+              <img src={iitbbslogo} alt="IIT Bhubaneswar" className="logo" />
+              <img src={ashvamedhalogo} alt="Asvamedha" className="logo" />
+              <img
+                src={sportsCouncilLogo}
+                alt="Sports Council"
+                className="logo"
+              />
+            </div>
             <div className="description">
               <p className="para">
-                Welcome to Asvamedha, IIT Bhubaneswar's annual sports fest. We
+                Welcome to Ashvamedha, IIT Bhubaneswar's annual sports fest. We
                 are passionate about sports and dedicated to promoting a culture
                 of fitness, competition, and camaraderie among the youth.
               </p>
@@ -39,14 +43,14 @@ function AboutUs() {
               </p>
               <p className="para">
                 Join us for a week of excitement, sportsmanship, and
-                celebration. Let's come together to make Asvamedha 2023 an
+                celebration. Let's come together to make Ashvamedha 2023 an
                 unforgettable experience.
               </p>
             </div>
           </div>
         </div>
         <div className="ath">
-            <img src={tshirt} alt="tshirt" />
+          <img src={tshirt} alt="tshirt" />
         </div>
       </Parallax>
     </div>
@@ -54,4 +58,3 @@ function AboutUs() {
 }
 
 export default AboutUs;
-

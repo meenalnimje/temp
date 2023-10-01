@@ -2,10 +2,10 @@
   position: relative;
   width: 100%;
   height: auto;
-  // border: 2px solid red;
 
   .content {
     padding: 50px;
+    // background-color: #FFF5E0;
     color: #fff;
 
     .title {
@@ -14,7 +14,7 @@
         font-size: 60px;
 
         .title1 {
-          color: #FF6F0F;
+          color: #FF6D02;
         }
       }
     }
@@ -23,14 +23,13 @@
       text-align: left;
       font-size: 1.3rem;
       line-height: 1.5;
-      margin-top: 150px;
       background-color: #0a0027;
+      opacity: 0.9;
       padding: 30px;
       border-radius: 40px;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin: 120px auto;
       justify-content: center;
-      width: 80%;
+      width: 70%;
     }
   }
 
@@ -52,7 +51,7 @@
   }
 
   .main-body {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -62,6 +61,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+    // background-color: #FFF5E0;
   }
 
   .ath img {
@@ -74,6 +74,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 150px;
+    // border: 2px solid red;
 
     .logo {
       max-width: 16%;

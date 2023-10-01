@@ -1,6 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
-import Cursor from "./components/Cursor/Cursor";
 import Events from "./pages/Events/Events";
 import Home from "./pages/Home/Home";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
@@ -12,7 +10,7 @@ import Sponsors from "./pages/Sponsors/Sponsors";
 function App() {
   return (
     <div className="App">
-      <Cursor />
+      {/* <Cursor /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />

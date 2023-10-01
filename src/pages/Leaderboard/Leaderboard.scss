@@ -34,6 +34,27 @@
     }
 }
 
+@media screen and (max-width:450px) {
+    .leaderboard {
+
+        .heading {
+            font-size: 24px;
+            margin: 10px;
+            width: 100%;
+            // border: 2px solid  red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content {
+            width: 90%;
+
+        }
+    }
+}
+
 @media screen and (max-width:350px) {
     .leaderboard {
 
@@ -50,7 +71,7 @@
 
         .content {
             width: 90%;
-            
+
         }
     }
 }
