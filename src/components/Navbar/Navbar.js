@@ -45,8 +45,8 @@ function Navbar() {
       navigate: true,
     },
     {
-      title: "Sponsors",
-      path: "/sponsors",
+      title: "Our Galllery",
+      path: "/gallery",
       cName: "nav-text",
       navigate: true,
     },

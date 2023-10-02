@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
 import "./Leaderboard.scss";
+
+import React, { useEffect, useState } from "react";
+
+import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
+import axios from "axios";
+import { setLoading } from "../../redux/appSlice";
+import { useDispatch } from "react-redux";
+
 function Leaderboard() {
   const [collegeScore, setCollegeScore] = useState([]);
+  const dispatch = useDispatch();
   const collegeInfo = [
     {
       collegeName: "niser",
@@ -67,20 +73,26 @@ function Leaderboard() {
     },
   ];
   async function fetchScore() {
-    const ticketInfos = await collegeInfo.map((item) =>
-      axios.post("/college/score", {
-        collegeName: item.collegeName,
-      })
-    );
-    const infos = await Promise.all(ticketInfos);
-    const array = infos.map((item) => (item = item.data.result));
-    const sortedArray = array.sort(function (a, b) {
-      return b[0] - a[0];
-    });
-    setCollegeScore(sortedArray);
+    try {
+      dispatch(setLoading(true));
+      const ticketInfos = collegeInfo.map((item) =>
+        axios.post("/college/score", {
+          collegeName: item.collegeName,
+        })
+      );
+      const infos = await Promise.all(ticketInfos);
+      const array = infos.map((item) => (item = item.data.result));
+      const sortedArray = array.sort(function (a, b) {
+        return b[0] - a[0];
+      });
+      setCollegeScore(sortedArray);
+    } catch (e) {
+      console.log("error from leaderboard side", e);
+    } finally {
+      dispatch(setLoading(false));
+    }
   }
   useEffect(() => {
-    // fetchdata();
     fetchScore();
   }, []);
   return (

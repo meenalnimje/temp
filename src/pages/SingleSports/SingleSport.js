@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import Navbar from "../../components/Navbar/Navbar";
 import { SliderData } from "../../components/ImageSlider/SliderData";
+import SportGallery from "../../components/SportGallery/SportGallery";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assets/eventsPhoto/badminton.jpg";
 import basketball from "../../assets/eventsPhoto/basketball.jpg";
