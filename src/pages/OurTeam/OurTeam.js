@@ -1,24 +1,26 @@
 import "./OurTeam.scss";
 
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
-import React from "react";
-import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
-import Image_DamtakLigu from "../../assets/profilePhotos/Image_DamtakLigu.jpeg";
-import Image_SarlongkiRongphar from "../../assets/profilePhotos/Image_SarlongkiRongphar.jpg";
 import Image_AnuragBurman from "../../assets/profilePhotos/Image_AnuragBurman.jpg";
 import Image_ArihantGarg from "../../assets/profilePhotos/Image_ArihantGarg.jpeg";
 import Image_AyushSingh from "../../assets/profilePhotos/Image_AyushSingh.jpg";
+import Image_DamtakLigu from "../../assets/profilePhotos/Image_DamtakLigu.jpeg";
+import Image_Deepanshu from "../../assets/profilePhotos/Image_Deepanshu.jpg";
+import Image_DeveshPatodkar from "../../assets/profilePhotos/Image_DeveshPatodkar.jpg";
+import Image_Meenal from "../../assets/profilePhotos/Image_Meenal.jpg";
 import Image_NatashaMukherjee from "../../assets/profilePhotos/Image_NatashaMukherjee.jpg";
 import Image_RamakrishnaReddy from "../../assets/profilePhotos/Image_RamakrishnaReddy.jpg";
-import Image_DeveshPatodkar from "../../assets/profilePhotos/Image_DeveshPatodkar.jpg";
+import Image_SarlongkiRongphar from "../../assets/profilePhotos/Image_SarlongkiRongphar.jpg";
+import Navbar from "../../components/Navbar/Navbar";
+import React from "react";
+import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
 
 // Sample team data
 const chiefCoordinator = [
   {
     name: "Deepanshu Choudhary",
     position: "Chief Coordinator",
-    image: dummyProfilePhoto,
+    image: Image_Deepanshu,
     no: "+91 8449485116",
   },
 ];
@@ -45,7 +47,7 @@ const teamMembers = [
   {
     name: "Meenal C Nimje",
     position: "Web&D Co-ordinator",
-    image: dummyProfilePhoto,
+    image: Image_Meenal,
     no: "+91 8591182265",
   },
 ];
