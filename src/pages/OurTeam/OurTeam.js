@@ -4,6 +4,14 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import React from "react";
 import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
+import Image_DamtakLigu from "../../assets/profilePhotos/Image_DamtakLigu.jpeg";
+import Image_SarlongkiRongphar from "../../assets/profilePhotos/Image_SarlongkiRongphar.jpg";
+import Image_AnuragBurman from "../../assets/profilePhotos/Image_AnuragBurman.jpg";
+import Image_ArihantGarg from "../../assets/profilePhotos/Image_ArihantGarg.jpeg";
+import Image_AyushSingh from "../../assets/profilePhotos/Image_AyushSingh.jpg";
+import Image_NatashaMukherjee from "../../assets/profilePhotos/Image_NatashaMukherjee.jpg";
+import Image_RamakrishnaReddy from "../../assets/profilePhotos/Image_RamakrishnaReddy.jpg";
+import Image_DeveshPatodkar from "../../assets/profilePhotos/Image_DeveshPatodkar.jpg";
 
 // Sample team data
 const chiefCoordinator = [
@@ -19,19 +27,19 @@ const teamMembers = [
   {
     name: "Damtak Ligu",
     position: "Publicity Co-ordinator",
-    image: dummyProfilePhoto,
+    image: Image_DamtakLigu,
     no: "+91 7630956265",
   },
   {
     name: "Sarlongki",
     position: "Events Co-ordinator",
-    image: dummyProfilePhoto,
+    image: Image_SarlongkiRongphar,
     no: "+91 8135071971",
   },
   {
     name: "Anurag Barman",
     position: "Sponsor Co-ordinator",
-    image: dummyProfilePhoto,
+    image: Image_AnuragBurman,
     no: "+91 7099537740",
   },
   {
@@ -45,25 +53,25 @@ const corehead = [
   {
     name: "Arihant Garg",
     position: "Core Head",
-    image: dummyProfilePhoto,
+    image: Image_ArihantGarg,
     no: "+91 8448861199",
   },
   {
     name: "Ayush Singh",
     position: "Core Head",
-    image: dummyProfilePhoto,
+    image: Image_AyushSingh,
     no: "+91 7078421798",
   },
   {
     name: "Natasha Mukherjee",
     position: "Core Head",
-    image: dummyProfilePhoto,
+    image: Image_NatashaMukherjee,
     no: "+91 9959533758",
   },
   {
     name: "Ram Reddy",
     position: "Core Head",
-    image: dummyProfilePhoto,
+    image: Image_RamakrishnaReddy,
     no: "+91 8328537734",
   },
   {
@@ -75,7 +83,7 @@ const corehead = [
   {
     name: "Devesh Patodkar",
     position: "Core Head",
-    image: dummyProfilePhoto,
+    image: Image_DeveshPatodkar,
     no: "+91 8379957983",
   },
   {
