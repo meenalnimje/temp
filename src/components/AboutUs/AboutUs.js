@@ -7,6 +7,7 @@ import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
 import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png";
 import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png";
 import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp";
+import CounterUpPage from "./CounterUpPage";
 
 function AboutUs() {
   return (
@@ -49,12 +50,28 @@ function AboutUs() {
             </div>
           </div>
         </div>
+        
+        <div className="counter">
+            <CounterUpPage/>
+        </div>
+
+        <div className="content">
+        <div className="title">
+            <h1>
+              <span className="title1">OUR </span>
+              <span className="title2"> MERCHANDISE</span>
+            </h1>
+        </div>
+        </div>
+
         <div className="ath">
           <img src={tshirt} alt="tshirt" />
         </div>
+
       </Parallax>
     </div>
   );
 }
 
 export default AboutUs;
+
