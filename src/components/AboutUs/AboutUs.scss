@@ -28,11 +28,15 @@
       padding: 30px;
       border-radius: 40px;
       margin: 120px auto;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 50px;
       justify-content: center;
+      align-items: center;
       width: 70%;
     }
   }
+
 
   .parallax__layer--base {
     img {
@@ -55,6 +59,22 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    .social-media {
+      border: 2px solid red;
+      display: flex;
+      height: 80px;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+
+
+      .icons {
+        border: 2px solid red;
+        // width: 33%;
+
+      }
+    }
   }
 
   .ath {

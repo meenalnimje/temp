@@ -7,9 +7,11 @@ import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function PointDetails() {
   const dispatch = useDispatch();
+  const isLoading = useSelector((state) => state.appReducer.isLoading);
   const [pointinfo, setPointinfo] = useState([]);
   const params = useParams();
   async function fetchdata() {
@@ -29,11 +31,13 @@ function PointDetails() {
     fetchdata();
   }, []);
   return (
-    <div className="pointdetail">
-      {pointinfo.map((item, index) => (
-        <PointInfo gameInfo={item} serialNo={index} />
-      ))}
-    </div>
+    !isLoading && (
+      <div className="pointdetail">
+        {pointinfo.map((item, index) => (
+          <PointInfo gameInfo={item} serialNo={index} />
+        ))}
+      </div>
+    )
   );
 }
 

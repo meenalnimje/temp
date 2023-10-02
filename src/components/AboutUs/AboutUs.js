@@ -1,5 +1,9 @@
 import "./AboutUs.scss";
 
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+
+import { AiOutlineInstagram } from "react-icons/ai";
+import CounterUpPage from "./CounterUpPage";
 import { Parallax } from "react-parallax";
 import React from "react";
 import aboutus from "../../assets/demoPhotos/bgimage.jpg";
@@ -7,9 +11,32 @@ import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
 import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png";
 import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png";
 import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp";
-import CounterUpPage from "./CounterUpPage";
 
 function AboutUs() {
+  const handleRedirect = (platform) => {
+    let url;
+
+    switch (platform) {
+      case 1:
+        // Instagram
+        url = "https://www.instagram.com/ashvamedha_iitbbs/";
+        break;
+      case 2:
+        // Facebook
+        url = "https://www.facebook.com/AshvamedhaIITBBS/";
+        break;
+      case 3:
+        // LinkedIn
+        url =
+          "https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/";
+        break;
+      default:
+        // Default action if platform parameter is not recognized
+        return;
+    }
+
+    window.open(url, "_blank"); // Open the URL in a new tab
+  };
   return (
     <div className="AboutUs">
       <Parallax bgImage={aboutus} strength={500}>
@@ -50,28 +77,26 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        
+
         <div className="counter">
-            <CounterUpPage/>
+          <CounterUpPage />
         </div>
 
         <div className="content">
-        <div className="title">
+          <div className="title">
             <h1>
               <span className="title1">OUR </span>
               <span className="title2"> MERCHANDISE</span>
             </h1>
-        </div>
+          </div>
         </div>
 
         <div className="ath">
           <img src={tshirt} alt="tshirt" />
         </div>
-
       </Parallax>
     </div>
   );
 }
 
 export default AboutUs;
-

@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import ClipLoader from "react-spinners/ClipLoader";
 import Events from "./pages/Events/Events";
 import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
@@ -9,8 +8,16 @@ import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import OurTeam from "./pages/OurTeam/OurTeam";
 import PointDetails from "./pages/PointDetails/PointDetails";
 import SingleSport from "./pages/SingleSports/SingleSport";
+import SyncLoader from "react-spinners/SyncLoader";
 import { useSelector } from "react-redux";
 
+// import ClipLoader from "react-spinners/ClipLoader";
+const style = {
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+};
 const properties = {
   display: "block",
   margin: "0 auto",
@@ -28,14 +35,16 @@ function App() {
   }, [isLoading]);
   return (
     <div className="App">
-      <ClipLoader
-        color="white"
-        loading={loading}
-        cssOverride={properties}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
+      <div className="style" style={style}>
+        <SyncLoader
+          color="#030027"
+          loading={loading}
+          margin={5}
+          size={15}
+          speedMultiplier={1}
+          cssOverride={properties}
+        />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />

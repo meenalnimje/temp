@@ -1,14 +1,15 @@
 import "./Leaderboard.scss";
 
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
-import { useDispatch } from "react-redux";
 
 function Leaderboard() {
   const [collegeScore, setCollegeScore] = useState([]);
+  const isLoading = useSelector((state) => state.appReducer.isLoading);
   const dispatch = useDispatch();
   const collegeInfo = [
     {
@@ -96,16 +97,18 @@ function Leaderboard() {
     fetchScore();
   }, []);
   return (
-    <div className="leaderboard">
-      <div className="heading">
-        <h1 className="text">POINT TABLE</h1>
+    !isLoading && (
+      <div className="leaderboard">
+        <div className="heading">
+          <h1 className="text">POINT TABLE</h1>
+        </div>
+        <div className="content">
+          {collegeScore.map((item, index) => (
+            <CollegeWrapper collegeInfo={item} serialNo={index} />
+          ))}
+        </div>
       </div>
-      <div className="content">
-        {collegeScore.map((item, index) => (
-          <CollegeWrapper collegeInfo={item} serialNo={index} />
-        ))}
-      </div>
-    </div>
+    )
   );
 }
 
