@@ -56,7 +56,25 @@
                         align-items: center;
                         margin-right: 10px;
                         border-radius: 10px;
+                        transition: transform 0.3s ease, color 0.3s ease; 
                         cursor: pointer;
+
+                        &.instagram{
+                            color: #d11cd1;
+                          }
+                      
+                          &.facebook{
+                            color: rgb(26, 72, 158);
+                          }
+                      
+                          &.linkedin{
+                            color: rgb(19, 82, 170);
+                          }
+                    }
+
+                    .icons:hover {
+                        transform: scale(1.25);
+                        filter: brightness(0.85); 
                     }
                 }
             }
@@ -107,7 +125,7 @@
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     .footer {
 
         // border: 2px solid red;
@@ -204,78 +222,78 @@
     }
 }
 
-@media screen and (max-width:350px) {
-    .footer {
+// @media screen and (max-width:550px) {
+//     .footer {
 
-        .container {
+//         .container {
 
-            .part1 {
+//             .part1 {
 
-                .left {
-                    padding-left: 15px;
-                    // border: 2px solid red;
+//                 .left {
+//                     padding-left: 15px;
+//                     // border: 2px solid red;
 
-                    .title {
-                        // display: flex;
-                        // justify-content: start;
-                        // align-items: start;
-                        // border: 2px solid red;
-                        // padding-right: 30px;
-                        padding-top: 20px;
-                        padding-left: 10px;
-                    }
+//                     .title {
+//                         // display: flex;
+//                         // justify-content: start;
+//                         // align-items: start;
+//                         // border: 2px solid red;
+//                         // padding-right: 30px;
+//                         padding-top: 20px;
+//                         padding-left: 10px;
+//                     }
 
-                    .social-media {
-                        // border: 2px soild red;
-                        width: 55%;
+//                     .social-media {
+//                         // border: 2px soild red;
+//                         width: 55%;
 
-                        .icons {}
-                    }
-                }
+//                         .icons {}
+//                     }
+//                 }
 
-                .right {
-                    // border: 2px solid red;
-                    margin-top: 10px;
-                    position: absolute;
-                    padding-left: 15px;
-                    top: 35%;
-                    width: 100%;
-                    left: 0;
-                    padding-top: 20px;
+//                 .right {
+//                     // border: 2px solid red;
+//                     margin-top: 10px;
+//                     position: absolute;
+//                     padding-left: 15px;
+//                     top: 35%;
+//                     width: 100%;
+//                     left: 0;
+//                     padding-top: 20px;
 
-                    p {
-                        color: rgb(161, 177, 191);
-                        margin-bottom: 5px;
-                        font-size: 18px;
-                        display: flex;
-                        align-items: center;
+//                     p {
+//                         color: rgb(161, 177, 191);
+//                         margin-bottom: 5px;
+//                         font-size: 18px;
+//                         display: flex;
+//                         align-items: center;
 
-                        span {
-                            margin-right: 10px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            // border: 2px solid red;
-                            font-size: 18px;
-                        }
-                    }
-                }
-            }
+//                         span {
+//                             margin-right: 10px;
+//                             display: flex;
+//                             align-items: center;
+//                             justify-content: center;
+//                             // border: 2px solid red;
+//                             font-size: 18px;
+//                         }
+//                     }
+//                 }
+//             }
 
-            .part2 {
-                border: 2px solid white;
-                width: 100%;
+//             .part2 {
+//                 border: 2px solid white;
+//                 width: 100%;
 
-                .bottom {
-                    border: 2px solid red;
-                    width: 100%;
-                    margin-left: 0;
+//                 .bottom {
+//                     border: 2px solid red;
+//                     width: 100%;
+//                     margin-left: 0;
 
-                    p {
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-}
+//                     p {
+//                         font-size: 18px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

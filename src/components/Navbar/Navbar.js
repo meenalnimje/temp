@@ -45,7 +45,7 @@ function Navbar() {
       navigate: true,
     },
     {
-      title: "Our Galllery",
+      title: "Our Gallery",
       path: "/gallery",
       cName: "nav-text",
       navigate: true,
@@ -84,7 +84,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="social-media">
-        {/* hamburget menu start  */}
+        {/* hamburger menu start  */}
         <div className="hamburger-menu">
           <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
             <GiHamburgerMenu className="icon" />
