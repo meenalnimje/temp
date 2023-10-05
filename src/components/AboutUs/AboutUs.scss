@@ -81,14 +81,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    // border: 2px solid red;
+
+    // margin-top: 25px;
     // background-color: #FFF5E0;
+    margin-bottom: 100px;
+
+    img {
+      width: 60%;
+      height: auto;
+      // border: 2px solid red;
+    }
   }
 
-  .ath img {
-    max-width: 90%;
-    height: auto;
-  }
 
 
   .logos {

@@ -10,7 +10,7 @@ import aboutus from "../../assets/demoPhotos/bgimage.jpg";
 import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
 import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png";
 import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png";
-import tshirt from "../../assets/demoPhotos/tshirtdummyphoto.webp";
+import tshirt from "../../assets/finalPhotos/finalTshirt.png";
 
 function AboutUs() {
   const handleRedirect = (platform) => {

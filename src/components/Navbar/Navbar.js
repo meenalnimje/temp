@@ -45,9 +45,9 @@ function Navbar() {
       navigate: true,
     },
     {
-      title: "Our Galllery",
+      title: "Our Gallery",
       path: "/gallery",
-      cName: "nav-text",
+      cName: "nav-text special",
       navigate: true,
     },
     {

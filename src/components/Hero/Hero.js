@@ -23,8 +23,6 @@ function Hero() {
     transition: "all ease-in-out 4s",
     objectFit: "cover",
     opacity: "1",
-    // filter: " blur(2px)",
-    // webkitFilter: "blur(2px)",
   };
   const goToNext = (currState) => {
     setCurrState(currState);
@@ -51,7 +49,7 @@ function Hero() {
             </p>
           </div>
           <div className="description">
-            <p className="date">28-29 OCTOBER</p>
+            <p className="date">28-29 OCTOBER 2023</p>
             <p className="theme">EMPOWER . ENDURE . EXCEL</p>
             <p className="name">THE ANNUAL SPORTS FEST OF IIT BHUBHANESWAR</p>
             <div className="buttons">

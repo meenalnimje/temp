@@ -36,7 +36,7 @@ function SingleSport() {
       date: "28th-29th October",
       location: "SES Room No: 218,219",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSeNmRWHKw7EtnT9qHi1RQR9wtH4C9qmPTaGY9KRuHwmKY3gQQ/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Devesh Patodkar",
       // imageGallery: [],
@@ -49,7 +49,7 @@ function SingleSport() {
       date: "28th-29th October",
       location: "Inside SAC Badminton Court 1,2",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfQCeZ8wOvee8Bsib_gDMM6h8qAxHkCR4GnQZQCtuPbmL6RPQ/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Pranav P",
     },
@@ -61,7 +61,7 @@ function SingleSport() {
       date: "28th-29th October",
       location: "Volleyball Court 1,2",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSdZNWWyt43KqeVfyfwrqCBKLU24Yjs6xC1VTdGSLvT5hBCeXA/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Justa Tirkey",
     },
@@ -73,7 +73,7 @@ function SingleSport() {
       date: "28th-29th October",
       location: "Football Ground",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSc2LLCqkKikPE8qUvW8eX3Rmp8GWkdcjXeoXIavFJUSOjCOlw/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Megha Shyam",
     },
@@ -85,7 +85,7 @@ function SingleSport() {
       date: "28th-29th October",
       location: "Basketball Court 1,2",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLScZ59xCzIccTuFT4DQmOQJPpFEc0kId6C02FGHorU22KDyDFQ/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Ayush Singh & Pranav P",
     },
@@ -97,7 +97,7 @@ function SingleSport() {
       location: "Inside SAC Multi-Purpose Hall",
       date: "28th-29th October",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
       poc: "Jatin Sahu",
       rulebook: rulebook,
     },
@@ -109,7 +109,7 @@ function SingleSport() {
       location: "Lawn Tennis Court 1,2",
       date: "28th-29th October",
       registrationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSc2SFwaA8IdCIIfEKonl_vUyG7c7uw2K54yqyi4iDg4fRpUzA/viewform?usp=sf_link",
+        "https://docs.google.com/forms/d/e/1FAIpQLSf-QWNI9d6_3PSTEP0OVwmFqy6d-mGe0CAMc1dnKuwlcopiwQ/viewform?usp=sf_link",
       poc: "Ashvarth",
       rulebook: rulebook,
     },
