@@ -66,7 +66,7 @@ function Footer() {
               <span>
                 <BiSolidPhoneCall />
               </span>
-              +91 81260 48919
+              +91 84494 85116
             </p>
             <p className="email">
               <span>
