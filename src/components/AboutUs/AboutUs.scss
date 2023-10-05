@@ -38,7 +38,7 @@
       transition: transform 0.3s ease;
     }
 
-    .description:hover{
+    .description:hover {
       transform: scale(1.05);
     }
   }
@@ -67,71 +67,76 @@
     flex-direction: column;
   }
 
-  .social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -30px;
-    margin-bottom: 20px;
-  }
-  
   .icons {
     margin: 0px 30px;
     font-size: 44px;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
 
-    &.instagram{
+    &.instagram {
       color: #d11cd1;
     }
 
-    &.facebook{
+    &.facebook {
       color: rgb(26, 72, 158);
     }
 
-    &.linkedin{
+    &.linkedin {
       color: rgb(19, 82, 170);
     }
   }
-  
+
   .icons:hover {
     transform: scale(1.25);
-    filter: brightness(0.85); 
+    filter: brightness(0.85);
   }
 
   .social-media {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -30px;
+    margin-top: 30px;
     margin-bottom: 20px;
+    height: 80px;
   }
-  
+
   .icons {
     margin: 0 30px;
     font-size: 44px;
     color: #fff;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
-  
+
   .icons:hover {
     transform: scale(1.2);
-    color: #FF6D02; 
+    color: #FF6D02;
   }
 
   .ath {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    // border: 2px solid red;
+
+    // margin-top: 25px;
     // background-color: #FFF5E0;
+    margin-bottom: 100px;
+
+    img {
+      width: 60%;
+      height: auto;
+      // border: 2px solid red;
+    }
   }
 
-  .ath img {
-    max-width: 90%;
-    height: auto;
-  }
 
 
   .logos {
@@ -155,9 +160,29 @@
       }
     }
 
-    .icons{
-      margin-top: -30px;
-      margin-bottom: 0px;
+    .social-media {
+      // border: 2px solid red;
+      width: 100%;
+    }
+
+    .icons {
+      // margin-top: -30px;
+      // border: 2px solid red;
+      font-size: 36px;
+      margin: 0 10px;
+      height: 60px;
+    }
+
+    .ath {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -171,16 +196,16 @@
       }
     }
 
-    .icons{
+    .icons {
       margin-top: -30px;
       margin-bottom: 0px;
     }
 
-    .content{
+    .content {
 
       padding: 20px;
 
-      .description{
+      .description {
         font-size: 1.2rem;
         line-height: 1.5;
         background-color: #0a0027;
@@ -202,7 +227,7 @@
         h1 {
           text-align: center;
           font-size: 45px;
-  
+
           .title1 {
             color: #FF6D02;
           }
@@ -213,6 +238,3 @@
       margin-bottom: 0px;
     }
   }
-
-
-

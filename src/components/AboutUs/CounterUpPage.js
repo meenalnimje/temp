@@ -16,21 +16,27 @@ const CounterUpPage = () => {
       <div className="counterUpRow">
         <div className="counterUp">
           <h1>
-            {countersOn[0] && <CountUp start={1} end={7} duration={1} delay={0} />}
+            {countersOn[0] && (
+              <CountUp start={1} end={7} duration={1} delay={0} />
+            )}
           </h1>
           <p>SPORTS</p>
         </div>
 
         <div className="counterUp">
           <h1>
-            {countersOn[1] && <CountUp start={10} end={12} duration={2} delay={0} />}
+            {countersOn[1] && (
+              <CountUp start={10} end={12} duration={2} delay={0} />
+            )}
           </h1>
           <p>COLLEGES</p>
         </div>
 
         <div className="counterUp">
           <h1>
-            {countersOn[2] && <CountUp start={100} end={400} duration={2} delay={0} />}
+            {countersOn[2] && (
+              <CountUp start={100} end={400} duration={2} delay={0} />
+            )}
             +
           </h1>
           <p>PARTICIPANTS</p>
@@ -38,7 +44,9 @@ const CounterUpPage = () => {
 
         <div className="counterUp">
           <h1>
-            {countersOn[3] && <CountUp start={1000} end={2000} duration={2} delay={0} />}
+            {countersOn[3] && (
+              <CountUp start={1000} end={2000} duration={2} delay={0} />
+            )}
             +
           </h1>
           <p>FOOTFALL</p>

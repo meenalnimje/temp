@@ -187,12 +187,18 @@
     }
 
     .slider-controler .swiper-button-next {
-        left: 58% !important;
+        left: 95% !important;
+        transform: translateX(-58%) !important;
+    }
+
+    .slider-controler .swiper-button-prev {
+        left: 5% !important;
         transform: translateX(-58%) !important;
     }
 
     @media (max-width: 990px) {
         .slider-controler .swiper-button-next {
+            display: none;
             left: 70% !important;
             transform: translateX(-70%) !important;
         }
@@ -207,6 +213,7 @@
 
     @media (max-width: 990px) {
         .slider-controler .swiper-button-prev {
+            display: none;
             left: 30% !important;
             transform: translateX(-30%) !important;
         }
@@ -230,7 +237,7 @@
     }
 
     .slider-controler .slider-arrow ion-icon {
-        font-size: 5rem;
+        font-size: 3rem;
         color: #ffffff;
     }
 
@@ -241,16 +248,14 @@
     .swiper-pagination {
         position: relative;
         width: 100% !important;
-        // border: 2px solid rgb(255, 255, 255);
         bottom: 1rem;
     }
 
     .swiper-pagination .swiper-pagination-bullet {
-        // filter: drop-shadow(0px 8px 24px rgba(255, 255, 255, 0.1));
+        filter: drop-shadow(0px 8px 24px rgba(255, 255, 255, 0.1));
         background-color: #FF6D02;
         width: 1rem;
         height: 1rem;
-        // font-size: 2rem;
     }
 
     .swiper-pagination .swiper-pagination-bullet-active {
@@ -287,6 +292,8 @@
         .swiper_container {
             // height: 50rem;
             padding: 0rem 0;
+            // border: 2px solid red;
+            border-radius: 30px;
             position: relative;
         }
 
@@ -350,6 +357,12 @@
 
             .ui-card {
                 box-shadow: none;
+                border-radius: 30px;
+
+                img {
+
+                    border-radius: 30px;
+                }
 
                 .description {
                     display: flex;

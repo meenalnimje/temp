@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Footer from "../../components/Footer/Footer";
@@ -120,13 +121,16 @@ function Events() {
               </div>
             </SwiperSlide>
           ))}
-
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
+              <ion-icon name="arrow-back-outline">
+                <GrCaretPrevious className="prev" />
+              </ion-icon>
             </div>
             <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
+              <ion-icon name="arrow-forward-outline">
+                <GrCaretNext className="next" />
+              </ion-icon>
             </div>
             <div className="swiper-pagination"></div>
           </div>
