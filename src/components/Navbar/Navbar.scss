@@ -25,6 +25,8 @@
             height: 100%;
             cursor: pointer;
         }
+
+        
     }
 }
 
@@ -94,22 +96,9 @@
 }
 
 
+
 /* responsive css style  */
 @media (max-width: 1080px) {
-    .main-nav {
-        height: 8rem;
-        grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
-    }
-
-    .logo,
-    .menu-link ul,
-    .social-media ul {
-        height: 8rem;
-    }
-}
-
-/* responsive css style  */
-@media (max-width: 998px) {
     .main-nav {
         height: 80px;
         grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
