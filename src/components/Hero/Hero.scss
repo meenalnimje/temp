@@ -136,9 +136,7 @@
         .container {
             display: flex;
             justify-content: center;
-            // flex-direction: column;
             align-items: center;
-            // border: 2px solid yellow;
             width: 100%;
 
             .content-hero {
@@ -153,10 +151,9 @@
                 .wrapper.three {
                     background-color: transparent;
                     // position: absolute;
-                    // top: 30%;
-                    // width: 80%;
-                     left: 30%;
-                    // border: 2px solid red;
+                    top: 30%;
+                    // width: 100%;
+                    left: 13%;
                 }
 
                 .three {
@@ -165,7 +162,7 @@
                     left: 6%;
                     // border: 2px solid red;
                     width: 50%;
-                    
+
 
                     p {
                         font-size: 46px;
