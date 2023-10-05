@@ -77,12 +77,6 @@ const corehead = [
     no: "+91 8328537734",
   },
   {
-    name: "Aditya Mishra",
-    position: "Core Head",
-    image: dummyProfilePhoto,
-    no: "+91 9343586835",
-  },
-  {
     name: "Devesh Patodkar",
     position: "Core Head",
     image: Image_DeveshPatodkar,
