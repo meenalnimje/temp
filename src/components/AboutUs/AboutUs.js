@@ -89,7 +89,34 @@ function AboutUs() {
     <FaLinkedinIn className="icon" />
   </div>
 </div>
-
+  <div className="icons">
+    <a
+      href="https://www.instagram.com/ashvamedha_iitbbs/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <AiOutlineInstagram className="icon" />
+    </a>
+  </div>
+  <div className="icons">
+    <a
+      href="https://www.facebook.com/AshvamedhaIITBBS/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaFacebookF className="icon" />
+    </a>
+  </div>
+  <div className="icons">
+    <a
+      href="https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaLinkedinIn className="icon" />
+    </a>
+  </div>
+</div>
         <div className="counter">
           <CounterUpPage />
         </div>

@@ -99,6 +99,27 @@
     filter: brightness(0.85); 
   }
 
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+  
+  .icons {
+    margin: 0 30px;
+    font-size: 44px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  .icons:hover {
+    transform: scale(1.2);
+    color: #FF6D02; 
+  }
+
   .ath {
     display: flex;
     justify-content: center;
@@ -188,7 +209,9 @@
         }
       }
     }
-
+      margin-top: -10px;
+      margin-bottom: 0px;
+    }
   }
 }
 
