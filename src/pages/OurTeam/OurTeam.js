@@ -19,7 +19,7 @@ import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg
 const chiefCoordinator = [
   {
     name: "Deepanshu Choudhary",
-    position: "Chief Coordinator",
+    position: "Chief Co-ordinator",
     image: Image_Deepanshu,
     no: "+91 8449485116",
   },
@@ -40,7 +40,7 @@ const teamMembers = [
   },
   {
     name: "Anurag Barman",
-    position: "Sponsor Co-ordinator",
+    position: "Spons Co-ordinator",
     image: Image_AnuragBurman,
     no: "+91 7099537740",
   },
@@ -75,12 +75,6 @@ const corehead = [
     position: "Core Head",
     image: Image_RamakrishnaReddy,
     no: "+91 8328537734",
-  },
-  {
-    name: "Aditya Mishra",
-    position: "Core Head",
-    image: dummyProfilePhoto,
-    no: "+91 9343586835",
   },
   {
     name: "Devesh Patodkar",
