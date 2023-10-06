@@ -81,12 +81,6 @@ function Events() {
         <span className="h2">EVENTS</span>
       </h2>
       <div className="event-container">
-        {/* <div className="cards">
-          {sportsInfo.map((item) => (
-            <SportsCard info={item} key={item.id} />
-          ))}
-        </div>
-         */}
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

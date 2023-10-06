@@ -4,11 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import Footer from "../../components/Footer/Footer";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import Navbar from "../../components/Navbar/Navbar";
-import { SliderData } from "../../components/ImageSlider/SliderData";
-import SportGallery from "../../components/SportGallery/SportGallery";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assets/eventsPhoto/badminton.jpg";
 import basketball from "../../assets/eventsPhoto/basketball.jpg";
@@ -39,7 +35,6 @@ function SingleSport() {
         "https://docs.google.com/forms/d/e/1FAIpQLSeNmRWHKw7EtnT9qHi1RQR9wtH4C9qmPTaGY9KRuHwmKY3gQQ/viewform?usp=sf_link",
       rulebook: rulebook,
       poc: "Devesh Patodkar",
-      // imageGallery: [],
     },
     {
       id: 2,

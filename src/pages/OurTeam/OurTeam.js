@@ -13,7 +13,6 @@ import Image_RamakrishnaReddy from "../../assets/profilePhotos/Image_Ramakrishna
 import Image_SarlongkiRongphar from "../../assets/profilePhotos/Image_SarlongkiRongphar.jpg";
 import Navbar from "../../components/Navbar/Navbar";
 import React from "react";
-import dummyProfilePhoto from "../../assets/profilePhotos/dummyprofileimage.jpeg";
 
 // Sample team data
 const chiefCoordinator = [
@@ -77,24 +76,11 @@ const corehead = [
     no: "+91 8328537734",
   },
   {
-    name: "Aditya Mishra",
-    position: "Core Head",
-    image: dummyProfilePhoto,
-    no: "+91 9343586835",
-  },
-  {
     name: "Devesh Patodkar",
     position: "Core Head",
     image: Image_DeveshPatodkar,
     no: "+91 8379957983",
   },
-  {
-    name: "Piyush Mishra",
-    position: "Core Head",
-    image: dummyProfilePhoto,
-    no: "+91 9528790874",
-  },
-  // Add more team members here
 ];
 
 function OurTeam() {

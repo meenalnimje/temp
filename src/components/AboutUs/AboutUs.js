@@ -18,24 +18,20 @@ function AboutUs() {
 
     switch (platform) {
       case 1:
-        // Instagram
         url = "https://www.instagram.com/ashvamedha_iitbbs/";
         break;
       case 2:
-        // Facebook
         url = "https://www.facebook.com/AshvamedhaIITBBS/";
         break;
       case 3:
-        // LinkedIn
         url =
           "https://www.linkedin.com/company/ashvamedha-iit-bhubaneswar/mycompany/";
         break;
       default:
-        // Default action if platform parameter is not recognized
         return;
     }
 
-    window.open(url, "_blank"); // Open the URL in a new tab
+    window.open(url, "_blank");
   };
   return (
     <div className="AboutUs">
