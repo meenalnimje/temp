@@ -77,7 +77,7 @@ function Leaderboard() {
     try {
       dispatch(setLoading(true));
       const ticketInfos = collegeInfo.map((item) =>
-        axios.post("/college/score", {
+        axios.post("https://ashvamedha.onrender.com/college/score", {
           collegeName: item.collegeName,
         })
       );
