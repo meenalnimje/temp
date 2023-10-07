@@ -5,20 +5,12 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
-import R from "../../doc/chess.pdf";
 import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assets/eventsPhoto/badminton.jpg";
-import badmintonR from "../../doc/badminton.pdf";
 import basketball from "../../assets/eventsPhoto/basketball.jpg";
-import basketballR from "../../doc/Basketball.pdf";
 import chess1 from "../../assets/eventsPhoto/chess1.jpg";
-import chessR from "../../doc/chess.pdf";
 import football1 from "../../assets/eventsPhoto/football1.jpg";
-import footballR from "../../doc/FOOTBALL.pdf";
-import lt from "../../doc/LawnTennis.pdf";
 import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
-import tt from "../../doc/TT.pdf";
-import volleyball from "../../doc/VOLLEYBALL.pdf";
 import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
 
 function SingleSport() {
@@ -40,7 +32,7 @@ function SingleSport() {
       location: "SES Room No: 218,219",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSeNmRWHKw7EtnT9qHi1RQR9wtH4C9qmPTaGY9KRuHwmKY3gQQ/viewform?usp=sf_link",
-      rulebook: chessR,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
       poc: "Devesh Patodkar",
     },
     {
@@ -52,7 +44,7 @@ function SingleSport() {
       location: "Inside SAC Badminton Court 1,2",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSfQCeZ8wOvee8Bsib_gDMM6h8qAxHkCR4GnQZQCtuPbmL6RPQ/viewform?usp=sf_link",
-      rulebook: badmintonR,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
       poc: "Pranav P",
     },
     {
@@ -64,7 +56,7 @@ function SingleSport() {
       location: "Volleyball Court 1,2",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSdZNWWyt43KqeVfyfwrqCBKLU24Yjs6xC1VTdGSLvT5hBCeXA/viewform?usp=sf_link",
-      rulebook: volleyball,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
       poc: "Justa Tirkey",
     },
     {
@@ -76,7 +68,7 @@ function SingleSport() {
       location: "Football Ground",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSc2LLCqkKikPE8qUvW8eX3Rmp8GWkdcjXeoXIavFJUSOjCOlw/viewform?usp=sf_link",
-      rulebook: footballR,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
       poc: "Megha Shyam",
     },
     {
@@ -88,7 +80,7 @@ function SingleSport() {
       location: "Basketball Court 1,2",
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLScZ59xCzIccTuFT4DQmOQJPpFEc0kId6C02FGHorU22KDyDFQ/viewform?usp=sf_link",
-      rulebook: basketballR,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
       poc: "Ayush Singh & Pranav P",
     },
     {
@@ -101,7 +93,7 @@ function SingleSport() {
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSfktHYxmXIKN_iowh15gurxkvr8BKKoSigVkyIp7YVchMMgvA/viewform?usp=sf_link",
       poc: "Jatin Sahu",
-      rulebook: tt,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
     },
     {
       id: 7,
@@ -113,7 +105,7 @@ function SingleSport() {
       registrationLink:
         "https://docs.google.com/forms/d/e/1FAIpQLSf-QWNI9d6_3PSTEP0OVwmFqy6d-mGe0CAMc1dnKuwlcopiwQ/viewform?usp=sf_link",
       poc: "Ashvarth",
-      rulebook: lt,
+      rulebook: "https://linktr.ee/ashvamedha.iitbbs",
     },
   ];
   useEffect(() => {
