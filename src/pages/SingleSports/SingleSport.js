@@ -3,40 +3,34 @@ import "./SingleSport.scss";
 import React, { useEffect, useState } from "react";
 
 import Navbar from "../../components/Navbar/Navbar";
-import axios from "axios";
+import badminton from "../../assests/demoPhotos/badminton.jpg";
+import bb from "../../assests/demoPhotos/basketball.jpg";
+import chess from "../../assests/demoPhotos/chess.jpg";
+import fb from "../../assests/demoPhotos/football.jpg";
+import lt from "../../assests/demoPhotos/lt.jpg";
+import tt from "../../assests/demoPhotos/tt.jpg";
 import { useParams } from "react-router-dom";
+import vb from "../../assests/demoPhotos/vb.jpg";
 
 function SingleSport() {
   const params = useParams();
   const { sportid } = params;
   const [sportDetail, setSportDetails] = useState({});
   const [sportImg, setSportImg] = useState([]);
-  const [popUpOpen, setPopUpOpen] = useState(false);
+  // const [popUpOpen, setPopUpOpen] = useState(false);
   function handleRegistration(sportName) {
     const response = sportsInfo.find((item) => item.sportName === sportName);
     window.open(response.registrationLink);
   }
-  async function fetchSportImages() {
-    const response = await axios.post(
-      "https://ashvamedha.onrender.com/upload/",
-      {
-        folderName: "eventImg",
-      }
-    );
-    // setBg(response.data.result);
-    setSportImg(response?.data?.result);
-  }
-
   useEffect(() => {
     const result = sportsInfo.find(({ id }) => id == sportid);
-    fetchSportImages();
     setSportDetails(result);
-  }, [params.id]);
+  }, [sportid]);
   const sportsInfo = [
     {
       id: 1,
       sportName: "Chess",
-      imgUrl: sportImg[0]?.image?.url,
+      imgUrl: chess,
       desc: "Chess, the game of intellect and strategy, challenges players to outthink their opponents, anticipate moves, and plan ahead. At the Ashvamedha Chess Championship, we celebrate this timeless battle of wits. Whether you're a seasoned player or just starting, join us for two days of intense competition and camaraderie.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "SES Room No: 218,219",
@@ -48,7 +42,7 @@ function SingleSport() {
     {
       id: 2,
       sportName: "Badminton",
-      imgUrl: sportImg[1]?.image?.url,
+      imgUrl: badminton,
       desc: "Badminton is a sport that demands speed, agility, and finesse. Whether you're smashing shuttlecocks or diving for a crucial save, the Ashvamedha Badminton Championship promises intense rallies and thrilling matches. Join us on the court for a birdie-tastic showdown.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Inside SAC Badminton Court 1,2",
@@ -60,7 +54,7 @@ function SingleSport() {
     {
       id: 3,
       sportName: "Volleyball",
-      imgUrl: sportImg[3]?.image?.url,
+      imgUrl: vb,
       desc: "Volleyball is a dynamic team sport that demands coordination, agility, and teamwork. Whether you're spiking, blocking, or diving for a save, it's all about the thrill of the game. Join us for a spirited match at Ashvamedha Sports Arena.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Volleyball Court 1,2",
@@ -72,7 +66,7 @@ function SingleSport() {
     {
       id: 4,
       sportName: "Football",
-      imgUrl: sportImg[6]?.image?.url,
+      imgUrl: fb,
       desc: "Football, the world's most beloved sport, unites people through the joy of scoring goals and making breathtaking saves. At Ashvamedha, we bring the football community together for a thrilling tournament filled with skill, passion, and unforgettable moments.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Football Ground",
@@ -84,7 +78,7 @@ function SingleSport() {
     {
       id: 5,
       sportName: "Basketball",
-      imgUrl: sportImg[2]?.image?.url,
+      imgUrl: bb,
       desc: "Basketball is a fast-paced, high-flying game of strategy and skill. Dribble, pass, and shoot your way to victory in the Ashvamedha Basketball Championship. Join us on the court for slam dunks and three-pointers that will leave you in awe.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Basketball Court 1,2",
@@ -96,7 +90,7 @@ function SingleSport() {
     {
       id: 6,
       sportName: "Table Tennis",
-      imgUrl: sportImg[4]?.image?.url,
+      imgUrl: tt,
       desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
       location: "Inside SAC Multi-Purpose Hall",
       date: "28th-29th October",
@@ -108,7 +102,7 @@ function SingleSport() {
     {
       id: 7,
       sportName: "Lawn Tennis",
-      imgUrl: sportImg[5]?.image?.url,
+      imgUrl: lt,
       desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
       location: "Lawn Tennis Court 1,2",
       date: "28th-29th October",

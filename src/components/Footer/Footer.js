@@ -43,16 +43,19 @@ function Footer() {
             </h1>
             <h2 className="desc">The Annual Sports fest of IIT Bhubaneswar</h2>
             <div className="social-media">
-  <div className="icons instagram" onClick={() => handleRedirect(1)}>
-    <AiOutlineInstagram className="icon" />
-  </div>
-  <div className="icons facebook" onClick={() => handleRedirect(2)}>
-    <FaFacebookF className="icon" />
-  </div>
-  <div className="icons linkedin" onClick={() => handleRedirect(3)}>
-    <FaLinkedinIn className="icon" />
-  </div>
-</div>
+              <div
+                className="icons instagram"
+                onClick={() => handleRedirect(1)}
+              >
+                <AiOutlineInstagram className="icon" />
+              </div>
+              <div className="icons facebook" onClick={() => handleRedirect(2)}>
+                <FaFacebookF className="icon" />
+              </div>
+              <div className="icons linkedin" onClick={() => handleRedirect(3)}>
+                <FaLinkedinIn className="icon" />
+              </div>
+            </div>
           </div>
           <div className="right">
             <h2 className="address">Address</h2>
@@ -66,7 +69,7 @@ function Footer() {
               <span>
                 <BiSolidPhoneCall />
               </span>
-              +91 81260 48919
+              +91 8449485116
             </p>
             <p className="email">
               <span>

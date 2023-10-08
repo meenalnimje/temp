@@ -19,8 +19,8 @@ function ImageUploder() {
     try {
       const result = await axios.post("http://localhost:4000/upload/create", {
         image,
-        folderName: "logos",
-        name: "tshirt",
+        folderName: "eventImgSmall",
+        name: "table tennis",
       });
     } catch (err) {
       console.log("error", err);

@@ -21,7 +21,7 @@ function Events() {
     const response = await axios.post(
       "https://ashvamedha.onrender.com/upload/",
       {
-        folderName: "eventImg",
+        folderName: "eventImgSmall",
       }
     );
     // setBg(response.data.result);
@@ -48,28 +48,28 @@ function Events() {
     {
       id: 3,
       sportName: "Volleyball",
-      imgUrl: eventImg[3]?.image?.url,
+      imgUrl: eventImg[2]?.image?.url,
       desc: "Success in volleyball comes not from individual glory but from seamless teamwork",
       date: "28th-29th October",
     },
     {
       id: 4,
       sportName: "Football",
-      imgUrl: eventImg[6]?.image?.url,
+      imgUrl: eventImg[4]?.image?.url,
       desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "28th-29th October",
     },
     {
       id: 5,
       sportName: "Basketball",
-      imgUrl: eventImg[2]?.image?.url,
+      imgUrl: eventImg[3]?.image?.url,
       desc: "Basketball is like photography. If you don't focus, all you have is the negative.",
       date: "28th-29th October",
     },
     {
       id: 6,
       sportName: "Table Tennis",
-      imgUrl: eventImg[4]?.image?.url,
+      imgUrl: eventImg[6]?.image?.url,
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
