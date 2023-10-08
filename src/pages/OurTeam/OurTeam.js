@@ -1,21 +1,31 @@
 import "./OurTeam.scss";
 
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
+import { setLoading } from "../../redux/appSlice";
 
 function OurTeam() {
+  const dispatch = useDispatch();
+  const isLoading = useSelector((state) => state.appReducer.isLoading);
   const [teamImg, setTeamImg] = useState([]);
   async function fetchTeamImages() {
-    const response = await axios.post(
-      "https://ashvamedha.onrender.com/upload/",
-      {
-        folderName: "TeamImg",
-      }
-    );
-    setTeamImg(response?.data?.result);
+    try {
+      dispatch(setLoading(true));
+      const response = await axios.post(
+        "https://ashvamedha.onrender.com/upload/",
+        {
+          folderName: "TeamImg",
+        }
+      );
+      setTeamImg(response?.data?.result);
+    } catch (err) {
+    } finally {
+      dispatch(setLoading(false));
+    }
   }
   useEffect(() => {
     fetchTeamImages();
@@ -88,61 +98,63 @@ function OurTeam() {
     },
   ];
   return (
-    <div className="OurTeam">
-      <Navbar />
-      <h2 className="heading">
-        <span className="h1">OUR</span>
-        <span className="h2"> TEAM</span>
-      </h2>
-      <div className="team-container">
-        <div className="cards">
-          {/* Display Chief Coordinator outside the grid */}
-          <div className="chief-coordinator">
-            {chiefCoordinator.map((member, index) => (
-              <div className="card" key={index}>
-                <div className="image">
-                  <img src={member.image} alt="" />
+    !isLoading && (
+      <div className="OurTeam">
+        <Navbar />
+        <h2 className="heading">
+          <span className="h1">OUR</span>
+          <span className="h2"> TEAM</span>
+        </h2>
+        <div className="team-container">
+          <div className="cards">
+            {/* Display Chief Coordinator outside the grid */}
+            <div className="chief-coordinator">
+              {chiefCoordinator.map((member, index) => (
+                <div className="card" key={index}>
+                  <div className="image">
+                    <img src={member.image} alt="" />
+                  </div>
+                  <div className="description">
+                    <p>{member.position}</p>
+                    <h3 className="name">{member.name}</h3>
+                    <h3>{member.no}</h3>
+                  </div>
                 </div>
-                <div className="description">
-                  <p>{member.position}</p>
-                  <h3 className="name">{member.name}</h3>
-                  <h3>{member.no}</h3>
+              ))}
+            </div>
+            <div className="coordinator">
+              {teamMembers.map((member, index) => (
+                <div className="card" key={index}>
+                  <div className="image">
+                    <img src={member.image} alt="" />
+                  </div>
+                  <div className="description">
+                    <p>{member.position}</p>
+                    <h3 className="name">{member.name}</h3>
+                    <h3>{member.no}</h3>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="coordinator">
-            {teamMembers.map((member, index) => (
-              <div className="card" key={index}>
-                <div className="image">
-                  <img src={member.image} alt="" />
+              ))}
+            </div>
+            <div className="coreheads">
+              {corehead.map((member, index) => (
+                <div className="card" key={index}>
+                  <div className="image">
+                    <img src={member.image} alt="" />
+                  </div>
+                  <div className="description">
+                    <p>{member.position}</p>
+                    <h3 className="name">{member.name}</h3>
+                    <h3>{member.no}</h3>
+                  </div>
                 </div>
-                <div className="description">
-                  <p>{member.position}</p>
-                  <h3 className="name">{member.name}</h3>
-                  <h3>{member.no}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="coreheads">
-            {corehead.map((member, index) => (
-              <div className="card" key={index}>
-                <div className="image">
-                  <img src={member.image} alt="" />
-                </div>
-                <div className="description">
-                  <p>{member.position}</p>
-                  <h3 className="name">{member.name}</h3>
-                  <h3>{member.no}</h3>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    )
   );
 }
 

@@ -8,24 +8,34 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useDispatch, useSelector } from "react-redux";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
+import { setLoading } from "../../redux/appSlice";
 import { useNavigate } from "react-router-dom";
 
 function Events() {
+  const isLoading = useSelector((state) => state.appReducer.isLoading);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [eventImg, setEventImg] = useState([]);
   async function fetchEventImages() {
-    const response = await axios.post(
-      "https://ashvamedha.onrender.com/upload/",
-      {
-        folderName: "eventImgSmall",
-      }
-    );
-    // setBg(response.data.result);
-    setEventImg(response?.data?.result);
+    try {
+      dispatch(setLoading(true));
+      const response = await axios.post(
+        "https://ashvamedha.onrender.com/upload/",
+        {
+          folderName: "eventImgSmall",
+        }
+      );
+      // setBg(response.data.result);
+      setEventImg(response?.data?.result);
+    } catch (err) {
+    } finally {
+      dispatch(setLoading(false));
+    }
   }
   useEffect(() => {
     fetchEventImages();
@@ -82,64 +92,66 @@ function Events() {
     },
   ];
   return (
-    <div className="events">
-      <Navbar />
-      <h2 className="heading">
-        <span className="h1">UPCOMING </span>
-        <span className="h2">EVENTS</span>
-      </h2>
-      <div className="event-container">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            clickable: true,
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
-        >
-          {sportsInfo.map((item) => (
-            <SwiperSlide
-              className="ui-card"
-              onClick={() => navigate(`/events/${item.id}`)}
-            >
-              <img src={item.imgUrl} alt="" />
-              <div class="description">
-                <h3>{item.sportName}</h3>
-                <p className="desc">"{item.desc}"</p>
-                <button className="btn-primary">Register now</button>
+    !isLoading && (
+      <div className="events">
+        <Navbar />
+        <h2 className="heading">
+          <span className="h1">UPCOMING </span>
+          <span className="h2">EVENTS</span>
+        </h2>
+        <div className="event-container">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            loop={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
+            pagination={{ el: ".swiper-pagination", clickable: true }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="swiper_container"
+          >
+            {sportsInfo.map((item) => (
+              <SwiperSlide
+                className="ui-card"
+                onClick={() => navigate(`/events/${item.id}`)}
+              >
+                <img src={item.imgUrl} alt="" />
+                <div class="description">
+                  <h3>{item.sportName}</h3>
+                  <p className="desc">"{item.desc}"</p>
+                  <button className="btn-primary">Register now</button>
+                </div>
+              </SwiperSlide>
+            ))}
+            <div className="slider-controler">
+              <div className="swiper-button-prev slider-arrow">
+                <ion-icon name="arrow-back-outline">
+                  <GrCaretPrevious className="prev" />
+                </ion-icon>
               </div>
-            </SwiperSlide>
-          ))}
-          <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline">
-                <GrCaretPrevious className="prev" />
-              </ion-icon>
+              <div className="swiper-button-next slider-arrow">
+                <ion-icon name="arrow-forward-outline">
+                  <GrCaretNext className="next" />
+                </ion-icon>
+              </div>
+              <div className="swiper-pagination"></div>
             </div>
-            <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline">
-                <GrCaretNext className="next" />
-              </ion-icon>
-            </div>
-            <div className="swiper-pagination"></div>
-          </div>
-        </Swiper>
+          </Swiper>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    )
   );
 }
 

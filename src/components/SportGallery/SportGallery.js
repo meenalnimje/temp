@@ -1,11 +1,15 @@
 import "./SportGallery.scss";
 
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { AiOutlineClose } from "react-icons/ai";
 import axios from "axios";
+import { setLoading } from "../../redux/appSlice";
 
 function SportGallery() {
+  const isLoading = useSelector((state) => state.appReducer.isLoading);
+  const dispatch = useDispatch();
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
   function getImg(imgSrc) {
@@ -14,13 +18,19 @@ function SportGallery() {
   }
   const [galleryImg, setGalleryImg] = useState([]);
   async function fetchGalleryImages() {
-    const response = await axios.post(
-      "https://ashvamedha.onrender.com/upload/",
-      {
-        folderName: "galleryImg",
-      }
-    );
-    setGalleryImg(response.data.result);
+    try {
+      dispatch(setLoading(true));
+      const response = await axios.post(
+        "https://ashvamedha.onrender.com/upload/",
+        {
+          folderName: "galleryImg",
+        }
+      );
+      setGalleryImg(response.data.result);
+    } catch (err) {
+    } finally {
+      dispatch(setLoading(false));
+    }
   }
   useEffect(() => {
     fetchGalleryImages();
@@ -179,28 +189,30 @@ function SportGallery() {
   ];
 
   return (
-    <div class="container-gallery">
-      <div className={model ? "model open" : "model"}>
-        <img src={tempImgSrc} alt="Loading..." />
-        <AiOutlineClose onClick={() => setModel(false)} className="icon" />
-      </div>
-      {galleryPhotos.map((item) => {
-        return item.isHeading ? (
-          <div className={`gallery-container ${item.cname}`}>
-            <div className="heading">{item.text}</div>
-          </div>
-        ) : (
-          <div className={`gallery-container ${item.cname}`}>
-            <div className="gallery-item" onClick={() => getImg(item.imgScr)}>
-              <div className="image">
-                <img src={item.imgScr} alt={item.imgText} />
-              </div>
-              <div className="text">{item.imgText}</div>
+    !isLoading && (
+      <div class="container-gallery">
+        <div className={model ? "model open" : "model"}>
+          <img src={tempImgSrc} alt="Loading..." />
+          <AiOutlineClose onClick={() => setModel(false)} className="icon" />
+        </div>
+        {galleryPhotos.map((item) => {
+          return item.isHeading ? (
+            <div className={`gallery-container ${item.cname}`}>
+              <div className="heading">{item.text}</div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          ) : (
+            <div className={`gallery-container ${item.cname}`}>
+              <div className="gallery-item" onClick={() => getImg(item.imgScr)}>
+                <div className="image">
+                  <img src={item.imgScr} alt={item.imgText} />
+                </div>
+                <div className="text">{item.imgText}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    )
   );
 }
 
