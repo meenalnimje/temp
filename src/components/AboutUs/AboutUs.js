@@ -1,18 +1,40 @@
 import "./AboutUs.scss";
 
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 
 import { AiOutlineInstagram } from "react-icons/ai";
 import CounterUpPage from "./CounterUpPage";
 import { Parallax } from "react-parallax";
-import React from "react";
-import aboutus from "../../assets/demoPhotos/bgimage.jpg";
-import ashvamedhalogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
-import iitbbslogo from "../../assets/demoPhotos/iitbbsLogo.png";
-import sportsCouncilLogo from "../../assets/demoPhotos/sportCouncil.png";
-import tshirt from "../../assets/finalPhotos/finalTshirt.png";
+import axios from "axios";
 
 function AboutUs() {
+  const [bg, setBg] = useState("");
+  const [logos, setLogos] = useState([]);
+  async function fetchBgImages() {
+    const response = await axios.post(
+      "https://ashvamedha.onrender.com/upload/",
+      {
+        folderName: "bgImg",
+      }
+    );
+    // setBg(response.data.result);
+    setBg(response?.data?.result[0]?.image?.url);
+  }
+  async function fetchLogoImages() {
+    const response = await axios.post(
+      "https://ashvamedha.onrender.com/upload/",
+      {
+        folderName: "logos",
+      }
+    );
+    // setBg(response.data.result);
+    setLogos(response?.data?.result);
+  }
+  useEffect(() => {
+    fetchBgImages();
+    fetchLogoImages();
+  }, []);
   const handleRedirect = (platform) => {
     let url;
 
@@ -35,7 +57,7 @@ function AboutUs() {
   };
   return (
     <div className="AboutUs">
-      <Parallax bgImage={aboutus} strength={500}>
+      <Parallax bgImage={bg} strength={500}>
         <div className="content">
           <div className="title">
             <h1>
@@ -45,13 +67,17 @@ function AboutUs() {
           </div>
           <div className="main-body">
             <div className="logos">
-              <img src={iitbbslogo} alt="IIT Bhubaneswar" className="logo" />
-              <img src={ashvamedhalogo} alt="Asvamedha" className="logo" />
-              <img
-                src={sportsCouncilLogo}
-                alt="Sports Council"
-                className="logo"
-              />
+              {logos?.map((item, index) => {
+                if (index !== 3) {
+                  return (
+                    <img
+                      src={item?.image?.url}
+                      alt={item.name}
+                      className="logo"
+                    />
+                  );
+                }
+              })}
             </div>
             <div className="description">
               <p className="para">
@@ -107,7 +133,7 @@ function AboutUs() {
         </div>
 
         <div className="ath">
-          <img src={tshirt} alt="tshirt" />
+          <img src={logos[3]?.image?.url} alt="tshirt" />
         </div>
       </Parallax>
     </div>

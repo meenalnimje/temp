@@ -1,32 +1,42 @@
 import "./SingleSport.scss";
 
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 
-import { AiOutlineDoubleRight } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
-import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
-import badminton from "../../assets/eventsPhoto/badminton.jpg";
-import basketball from "../../assets/eventsPhoto/basketball.jpg";
-import chess1 from "../../assets/eventsPhoto/chess1.jpg";
-import football1 from "../../assets/eventsPhoto/football1.jpg";
-import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
-import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function SingleSport() {
   const params = useParams();
   const { sportid } = params;
-  const [sport, setSport] = useState({});
+  const [sportDetail, setSportDetails] = useState({});
+  const [sportImg, setSportImg] = useState([]);
   const [popUpOpen, setPopUpOpen] = useState(false);
   function handleRegistration(sportName) {
     const response = sportsInfo.find((item) => item.sportName === sportName);
     window.open(response.registrationLink);
   }
+  async function fetchSportImages() {
+    const response = await axios.post(
+      "https://ashvamedha.onrender.com/upload/",
+      {
+        folderName: "eventImg",
+      }
+    );
+    // setBg(response.data.result);
+    setSportImg(response?.data?.result);
+  }
+
+  useEffect(() => {
+    const result = sportsInfo.find(({ id }) => id == sportid);
+    fetchSportImages();
+    setSportDetails(result);
+  }, [params.id]);
   const sportsInfo = [
     {
       id: 1,
       sportName: "Chess",
-      imgUrl: chess1,
+      imgUrl: sportImg[0]?.image?.url,
       desc: "Chess, the game of intellect and strategy, challenges players to outthink their opponents, anticipate moves, and plan ahead. At the Ashvamedha Chess Championship, we celebrate this timeless battle of wits. Whether you're a seasoned player or just starting, join us for two days of intense competition and camaraderie.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "SES Room No: 218,219",
@@ -38,7 +48,7 @@ function SingleSport() {
     {
       id: 2,
       sportName: "Badminton",
-      imgUrl: badminton,
+      imgUrl: sportImg[1]?.image?.url,
       desc: "Badminton is a sport that demands speed, agility, and finesse. Whether you're smashing shuttlecocks or diving for a crucial save, the Ashvamedha Badminton Championship promises intense rallies and thrilling matches. Join us on the court for a birdie-tastic showdown.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Inside SAC Badminton Court 1,2",
@@ -50,7 +60,7 @@ function SingleSport() {
     {
       id: 3,
       sportName: "Volleyball",
-      imgUrl: volleyball1,
+      imgUrl: sportImg[3]?.image?.url,
       desc: "Volleyball is a dynamic team sport that demands coordination, agility, and teamwork. Whether you're spiking, blocking, or diving for a save, it's all about the thrill of the game. Join us for a spirited match at Ashvamedha Sports Arena.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Volleyball Court 1,2",
@@ -62,7 +72,7 @@ function SingleSport() {
     {
       id: 4,
       sportName: "Football",
-      imgUrl: football1,
+      imgUrl: sportImg[6]?.image?.url,
       desc: "Football, the world's most beloved sport, unites people through the joy of scoring goals and making breathtaking saves. At Ashvamedha, we bring the football community together for a thrilling tournament filled with skill, passion, and unforgettable moments.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Football Ground",
@@ -74,7 +84,7 @@ function SingleSport() {
     {
       id: 5,
       sportName: "Basketball",
-      imgUrl: basketball,
+      imgUrl: sportImg[2]?.image?.url,
       desc: "Basketball is a fast-paced, high-flying game of strategy and skill. Dribble, pass, and shoot your way to victory in the Ashvamedha Basketball Championship. Join us on the court for slam dunks and three-pointers that will leave you in awe.Information Regarding the event is given below.",
       date: "28th-29th October",
       location: "Basketball Court 1,2",
@@ -86,7 +96,7 @@ function SingleSport() {
     {
       id: 6,
       sportName: "Table Tennis",
-      imgUrl: tabletennis,
+      imgUrl: sportImg[4]?.image?.url,
       desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
       location: "Inside SAC Multi-Purpose Hall",
       date: "28th-29th October",
@@ -98,7 +108,7 @@ function SingleSport() {
     {
       id: 7,
       sportName: "Lawn Tennis",
-      imgUrl: tabletennis,
+      imgUrl: sportImg[5]?.image?.url,
       desc: "Requires lightning-quick reflexes and precision. Ashvamedha's table tennis tournament is a showcase of spin serves, rallies, and impressive volleys. Come and experience the thrill of ping pong.Information Regarding the event is given below.",
       location: "Lawn Tennis Court 1,2",
       date: "28th-29th October",
@@ -108,15 +118,11 @@ function SingleSport() {
       rulebook: "https://linktr.ee/ashvamedha.iitbbs",
     },
   ];
-  useEffect(() => {
-    const result = sportsInfo.find(({ id }) => id == sportid);
-    setSport(result);
-  }, [params.id]);
   return (
     <div className="single-sport-page">
       <Navbar />
       <div className="sportspage">
-        <div className="popup-content">
+        {/* <div className="popup-content">
           <div className="match-popup">
             <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
               Click here for Upcoming Matches
@@ -132,33 +138,39 @@ function SingleSport() {
               children={"this is popup"}
               sportid={sportid}
             />
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
         <div className="cards">
           <div className="sports-info">
-            <h1 className="name">{sport.sportName}</h1>
-            <p className="desc">{sport.desc}</p>
+            <h1 className="name">{sportDetail.sportName}</h1>
+            <p className="desc">{sportDetail.desc}</p>
             <p className="poc">
-              <span className="highlight">Person of Contact:</span> {sport.poc}
+              <span className="highlight">Person of Contact:</span>{" "}
+              {sportDetail.poc}
             </p>
             <p className="venue">
-              <span className="highlight">Location:</span> {sport.location}
+              <span className="highlight">Location:</span>{" "}
+              {sportDetail.location}
             </p>
             <p className="date">
-              <span className="highlight">Date:</span> {sport.date}
+              <span className="highlight">Date:</span> {sportDetail.date}
             </p>
-            <a className="rulebook" href={sport.rulebook} download="Rulebook">
+            <a
+              className="rulebook"
+              href={sportDetail.rulebook}
+              download="Rulebook"
+            >
               <span className="highlight">Rulebook:</span> Click here
             </a>
             <button
               className="register-btn"
-              onClick={() => handleRegistration(sport.sportName)}
+              onClick={() => handleRegistration(sportDetail.sportName)}
             >
               Register Now
             </button>
           </div>
           <div className="sports-img">
-            <img src={sport.imgUrl} alt="ATHLETICS EVENTS" />
+            <img src={sportDetail.imgUrl} alt="Loading" />
           </div>
         </div>
       </div>

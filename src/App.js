@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Events from "./pages/Events/Events";
 import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
+import ImageUploder from "./pages/ImageUploder";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import OurTeam from "./pages/OurTeam/OurTeam";
 import PointDetails from "./pages/PointDetails/PointDetails";
@@ -53,6 +54,7 @@ function App() {
         <Route path="/leaderboard/:collegename" element={<PointDetails />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/upload" element={<ImageUploder />} />
       </Routes>
     </div>
   );

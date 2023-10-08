@@ -2,20 +2,28 @@ import "./Hero.scss";
 
 import React, { useEffect, useState } from "react";
 
-import badminton1 from "../../assets/demoPhotos/start now/1.png";
-import bb1 from "../../assets/demoPhotos/start now/2.png";
-import chess5 from "../../assets/demoPhotos/start now/8.png";
-import f1 from "../../assets/demoPhotos/start now/6.png";
-import tt2 from "../../assets/demoPhotos/start now/5.png";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import vb2 from "../../assets/demoPhotos/start now/7.png";
 
 function Hero() {
   const navigate = useNavigate();
   const [currState, setCurrState] = useState(0);
-  const images = [bb1, badminton1, chess5, f1, tt2, vb2];
+  const [images, setImages] = useState([]);
+  async function fetchSliderImages() {
+    const response = await axios.post(
+      "https://ashvamedha.onrender.com/upload/",
+      {
+        folderName: "sliderImg",
+      }
+    );
+    setImages(response.data.result);
+  }
+  useEffect(() => {
+    fetchSliderImages();
+  }, []);
+  const currStateUrl = images[currState]?.image?.url;
   const bgImageStyle = {
-    backgroundImage: `url(${images[currState]})`,
+    backgroundImage: `url(${currStateUrl})`,
     backgroundPosition: "bottom",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",

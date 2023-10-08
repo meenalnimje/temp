@@ -6,69 +6,77 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import React from "react";
-import badminton from "../../assets/eventsPhoto/badminton.jpg";
-import basketball from "../../assets/eventsPhoto/basketball.jpg";
-import chess1 from "../../assets/eventsPhoto/chess1.jpg";
-import football1 from "../../assets/eventsPhoto/football1.jpg";
-import lt from "../../assets/eventsPhoto/lt.jpg";
-import tabletennis from "../../assets/eventsPhoto/tabletennis.jpg";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import volleyball1 from "../../assets/eventsPhoto/volleyball1.jpg";
 
 function Events() {
   const navigate = useNavigate();
+  const [eventImg, setEventImg] = useState([]);
+  async function fetchEventImages() {
+    const response = await axios.post(
+      "https://ashvamedha.onrender.com/upload/",
+      {
+        folderName: "eventImg",
+      }
+    );
+    // setBg(response.data.result);
+    setEventImg(response?.data?.result);
+  }
+  useEffect(() => {
+    fetchEventImages();
+  }, []);
   const sportsInfo = [
     {
       id: 1,
       sportName: "Chess",
-      imgUrl: chess1,
+      imgUrl: eventImg[0]?.image?.url,
       desc: "Chess is the art of thinking ahead, of making complex decisions under pressure",
       date: "28th-29th October",
     },
     {
       id: 2,
       sportName: "Badminton",
-      imgUrl: badminton,
+      imgUrl: eventImg[1]?.image?.url,
       desc: "Badminton is not only about winning. It's about playing beautiful, memorable games.",
       date: "28th-29th October",
     },
     {
       id: 3,
       sportName: "Volleyball",
-      imgUrl: volleyball1,
+      imgUrl: eventImg[3]?.image?.url,
       desc: "Success in volleyball comes not from individual glory but from seamless teamwork",
       date: "28th-29th October",
     },
     {
       id: 4,
       sportName: "Football",
-      imgUrl: football1,
+      imgUrl: eventImg[6]?.image?.url,
       desc: "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do.",
       date: "28th-29th October",
     },
     {
       id: 5,
       sportName: "Basketball",
-      imgUrl: basketball,
+      imgUrl: eventImg[2]?.image?.url,
       desc: "Basketball is like photography. If you don't focus, all you have is the negative.",
       date: "28th-29th October",
     },
     {
       id: 6,
       sportName: "Table Tennis",
-      imgUrl: tabletennis,
+      imgUrl: eventImg[4]?.image?.url,
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
     {
       id: 7,
       sportName: "Lawn Tennis",
-      imgUrl: lt,
+      imgUrl: eventImg[5]?.image?.url,
       desc: "Tennis is mostly mental. You win or lose the match before you even go out there.",
       date: "28th-29th October",
     },
