@@ -141,7 +141,7 @@ function AboutUs() {
             <CounterUpPage />
           </div>
 
-          <div className="content">
+          {/* <div className="content">
             <div className="title">
               <h1>
                 <span className="title1">OUR </span>
@@ -152,7 +152,7 @@ function AboutUs() {
 
           <div className="ath">
             <img src={logos[3]?.image?.url} alt="tshirt" />
-          </div>
+          </div> */}
         </Parallax>
       </div>
     )

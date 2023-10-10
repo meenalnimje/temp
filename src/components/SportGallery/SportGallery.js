@@ -184,7 +184,7 @@ function SportGallery() {
     {
       cname: "w-2",
       imgScr: galleryImg[26]?.image?.url,
-      imgText: "Car-13",
+      imgText: "Car-18",
     },
   ];
 

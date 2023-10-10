@@ -113,12 +113,12 @@
                 transform: scale(1.2);
             }
 
-            // &:hover .text {
-            //     opacity: 1;
-            //     animation: move-down .3s linear;
-            //     padding: 1em;
-            //     width: 100%;
-            // }
+            &:hover .text {
+                opacity: 1;
+                animation: move-down .3s linear;
+                padding: 1em;
+                width: 100%;
+            }
         }
     }
 
