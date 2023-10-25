@@ -6,10 +6,14 @@ import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
 import ImageUploder from "./pages/ImageUploder";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
+import LiveScore from "./pages/LiveScore/LiveScore";
 import OurTeam from "./pages/OurTeam/OurTeam";
 import PointDetails from "./pages/PointDetails/PointDetails";
+import SetLiveScore from "./pages/SetLiveScore/SetLiveScore";
+import SetPointTableScore from "./pages/SetLiveScore/SetPointTableScore";
 import SingleSport from "./pages/SingleSports/SingleSport";
 import SyncLoader from "react-spinners/SyncLoader";
+import UpdateLiveScore from "./pages/SetLiveScore/UpdateLiveScore";
 import { useSelector } from "react-redux";
 
 // import ClipLoader from "react-spinners/ClipLoader";
@@ -50,11 +54,15 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:sportid" element={<SingleSport />} />
+        <Route path="/livescore/:sportname" element={<LiveScore />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/leaderboard/:collegename" element={<PointDetails />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/upload" element={<ImageUploder />} />
+        <Route path="/setmls" element={<SetLiveScore />} />
+        <Route path="/udtemls" element={<UpdateLiveScore />} />
+        <Route path="/udtept" element={<SetPointTableScore />} />
       </Routes>
     </div>
   );

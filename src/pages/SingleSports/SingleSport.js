@@ -1,23 +1,26 @@
 import "./SingleSport.scss";
 
 import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
+import { AiOutlineDoubleRight } from "react-icons/ai";
 import Navbar from "../../components/Navbar/Navbar";
+import UpcomingMatch from "../../components/UpcomingMatch/UpcomingMatch";
 import badminton from "../../assests/demoPhotos/badminton.jpg";
 import bb from "../../assests/demoPhotos/basketball.jpg";
 import chess from "../../assests/demoPhotos/chess.jpg";
 import fb from "../../assests/demoPhotos/football.jpg";
 import lt from "../../assests/demoPhotos/lt.jpg";
 import tt from "../../assests/demoPhotos/tt.jpg";
-import { useParams } from "react-router-dom";
 import vb from "../../assests/demoPhotos/vb.jpg";
 
 function SingleSport() {
   const params = useParams();
+  const navigate = useNavigate();
   const { sportid } = params;
   const [sportDetail, setSportDetails] = useState({});
   const [sportImg, setSportImg] = useState([]);
-  // const [popUpOpen, setPopUpOpen] = useState(false);
+  const [popUpOpen, setPopUpOpen] = useState(false);
   function handleRegistration(sportName) {
     const response = sportsInfo.find((item) => item.sportName === sportName);
     window.open(response.registrationLink);
@@ -116,11 +119,21 @@ function SingleSport() {
     <div className="single-sport-page">
       <Navbar />
       <div className="sportspage">
-        {/* <div className="popup-content">
+        <div className="popup-content">
           <div className="match-popup">
             <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
               Click here for Upcoming Matches
             </h2>
+            <AiOutlineDoubleRight
+              onClick={() => setPopUpOpen(!popUpOpen)}
+              className="next"
+            />
+          </div>
+          <div
+            className="match-liveScore"
+            onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
+          >
+            <h2 className="hover-link">Click here for Live score</h2>
             <AiOutlineDoubleRight
               onClick={() => setPopUpOpen(!popUpOpen)}
               className="next"
@@ -132,8 +145,8 @@ function SingleSport() {
               children={"this is popup"}
               sportid={sportid}
             />
-          )} */}
-        {/* </div> */}
+          )}
+        </div>
         <div className="cards">
           <div className="sports-info">
             <h1 className="name">{sportDetail.sportName}</h1>

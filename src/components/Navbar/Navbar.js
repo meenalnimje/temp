@@ -34,7 +34,7 @@ function Navbar() {
     },
     {
       title: "Leaderboard",
-      path: "/#",
+      path: "/leaderboard",
       cName: "nav-text",
       navigate: true,
     },
