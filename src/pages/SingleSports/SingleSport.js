@@ -119,7 +119,7 @@ function SingleSport() {
     <div className="single-sport-page">
       <Navbar />
       <div className="sportspage">
-        <div className="popup-content">
+        {/* <div className="popup-content">
           <div className="match-popup">
             <h2 onClick={() => setPopUpOpen(!popUpOpen)} className="hover-link">
               Click here for Upcoming Matches
@@ -135,18 +135,19 @@ function SingleSport() {
           >
             <h2 className="hover-link">Click here for Live score</h2>
             <AiOutlineDoubleRight
-              onClick={() => setPopUpOpen(!popUpOpen)}
               className="next"
+              onClick={() => navigate(`/livescore/${sportDetail.sportName}`)}
             />
           </div>
-          {popUpOpen && (
+          {/* {popUpOpen && (
             <UpcomingMatch
               trigger={true}
               children={"this is popup"}
               sportid={sportid}
             />
-          )}
-        </div>
+          )} 
+          </div>
+          */}
         <div className="cards">
           <div className="sports-info">
             <h1 className="name">{sportDetail.sportName}</h1>

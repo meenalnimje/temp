@@ -41,6 +41,7 @@ function AboutUs() {
         }
       );
       // setBg(response.data.result);
+      console.log("response of logos", response);
       setLogos(response?.data?.result);
     } catch (err) {
     } finally {
@@ -85,7 +86,7 @@ function AboutUs() {
             <div className="main-body">
               <div className="logos">
                 {logos?.map((item, index) => {
-                  if (index !== 3) {
+                  if (index !== 3 && index !== 4) {
                     return (
                       <img
                         src={item?.image?.url}
@@ -141,7 +142,7 @@ function AboutUs() {
             <CounterUpPage />
           </div>
 
-          {/* <div className="content">
+          <div className="content">
             <div className="title">
               <h1>
                 <span className="title1">OUR </span>
@@ -151,8 +152,8 @@ function AboutUs() {
           </div>
 
           <div className="ath">
-            <img src={logos[3]?.image?.url} alt="tshirt" />
-          </div> */}
+            <img src={logos[4]?.image?.url} alt="tshirt" />
+          </div>
         </Parallax>
       </div>
     )

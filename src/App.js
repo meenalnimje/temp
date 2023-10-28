@@ -54,15 +54,15 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:sportid" element={<SingleSport />} />
-        <Route path="/livescore/:sportname" element={<LiveScore />} />
+        {/* <Route path="/livescore/:sportname" element={<LiveScore />} /> */}
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/leaderboard/:collegename" element={<PointDetails />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/upload" element={<ImageUploder />} />
-        <Route path="/setmls" element={<SetLiveScore />} />
-        <Route path="/udtemls" element={<UpdateLiveScore />} />
-        <Route path="/udtept" element={<SetPointTableScore />} />
+        {/* <Route path="/setmls" element={<SetLiveScore />} /> */}
+        {/* <Route path="/udtemls" element={<UpdateLiveScore />} /> */}
+        {/* <Route path="/udtept" element={<SetPointTableScore />} /> */}
       </Routes>
     </div>
   );

@@ -69,7 +69,7 @@ function Hero() {
               </p>
             </div>
             <div className="description">
-              <p className="date">27-29 OCTOBER 2023</p>
+              <p className="date">3-5 NOVEMBER 2023</p>
               <p className="theme">EMPOWER . ENDURE . EXCEL</p>
               <p className="name">THE ANNUAL SPORTS FEST OF IIT BHUBHANESWAR</p>
               <div className="buttons">

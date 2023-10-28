@@ -123,11 +123,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+    // border: 2px solid red;
 
     img {
       width: 60%;
+      // border: 2px solid red;
       height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 60px;
     }
   }
 

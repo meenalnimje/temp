@@ -4,32 +4,24 @@ import axios from "axios";
 
 function UpdateLiveScore() {
   const [matchName, setMatchName] = useState("");
-  const [college1Name, setCollege1Name] = useState("");
-  const [college2Name, setcollege2Name] = useState("");
   const [college1Score, setCollege1Score] = useState("");
   const [college2Score, setCollege2Score] = useState("");
   const [setInfo, setSetInfo] = useState("");
   const [sportName, setSportName] = useState("");
-  const [category, setCategory] = useState("");
-  const [editedBy, setEditedBy] = useState("");
   async function handleLiveScore(e) {
     e.preventDefault();
     try {
       const response = await axios.put(
         "https://ashvamedha.onrender.com/sport/updatelivescore",
         {
-          college1Name,
-          college1Score,
-          college2Name,
-          college2Score,
-          matchName,
-          category,
-          sportName,
-          editedBy,
+          matchname: matchName,
+          sportname: sportName,
           set: setInfo,
+          college1Score,
+          college2Score,
         }
       );
-      console.log("response of setLive score", response);
+      console.log("response of livescore", response?.data?.result);
     } catch (error) {
       console.log("response of setLive score", error);
     }
@@ -47,28 +39,13 @@ function UpdateLiveScore() {
             <input type="text" onChange={(e) => setMatchName(e.target.value)} />
           </div>
           <div>
-            <label htmlFor="college1Name">
-              Enter college 1 name(in lowercase)
-            </label>
-            <input
-              type="text"
-              onChange={(e) => setCollege1Name(e.target.value)}
-            />
-          </div>
-          <div>
             <label htmlFor="matchName">Enter college 1 score</label>
             <input
               type="text"
               onChange={(e) => setCollege1Score(e.target.value)}
             />
           </div>
-          <div>
-            <label htmlFor="matchName">Enter college 2 name(inlowercase)</label>
-            <input
-              type="text"
-              onChange={(e) => setcollege2Name(e.target.value)}
-            />
-          </div>
+
           <div>
             <label htmlFor="matchName">Enter college 2 score</label>
             <input
@@ -76,18 +53,12 @@ function UpdateLiveScore() {
               onChange={(e) => setCollege2Score(e.target.value)}
             />
           </div>
-          <div>
-            <label htmlFor="matchName">Enter category (mens/womens)</label>
-            <input type="text" onChange={(e) => setCategory(e.target.value)} />
-          </div>
+
           <div>
             <label htmlFor="matchName">Enter setDetails</label>
             <input type="text" onChange={(e) => setSetInfo(e.target.value)} />
           </div>
-          <div>
-            <label htmlFor="matchName">editedBy</label>
-            <input type="text" onChange={(e) => setEditedBy(e.target.value)} />
-          </div>
+
           <input type="submit" onClick={handleLiveScore} />
         </form>
       </div>
