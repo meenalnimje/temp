@@ -19,7 +19,10 @@
             position: absolute;
             top: 100px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            // flex-direction: ;
+            // border: 2px solid red;
+
             align-items: center;
 
             .match-popup {
@@ -27,6 +30,32 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                margin-left: 35px;
+
+                .hover-link {
+                    font-size: 20px;
+                    // position: absolute;
+                    cursor: pointer;
+                    // top: 70px;
+                    flex: 4;
+                    color: #FF6D02;
+                }
+
+                .next {
+                    font-size: 40px;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+
+            .match-liveScore {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                cursor: pointer;
+                // border: 2px solid red;
+                // margin-top: 10px;
 
                 .hover-link {
                     font-size: 20px;

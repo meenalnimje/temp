@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import CollegeWrapper from "../../components/CollegeWrapper/CollegeWrapper";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
 
@@ -33,16 +35,6 @@ function Leaderboard() {
       collegeLogo: "",
     },
     {
-      collegeName: "ict",
-      displayName: "I.C.T",
-      collegeLogo: "",
-    },
-    {
-      collegeName: "igit",
-      displayName: "I.G.I.T",
-      collegeLogo: "",
-    },
-    {
       collegeName: "centurion",
       displayName: "CENTURION",
       collegeLogo: "",
@@ -52,11 +44,7 @@ function Leaderboard() {
       displayName: "AIIMS",
       collegeLogo: "",
     },
-    {
-      collegeName: "iiit",
-      displayName: "IIIT",
-      collegeLogo: "",
-    },
+
     {
       collegeName: "cvraman",
       displayName: "CVRAMAN",
@@ -77,7 +65,7 @@ function Leaderboard() {
     try {
       dispatch(setLoading(true));
       const ticketInfos = collegeInfo.map((item) =>
-        axios.post("/college/score", {
+        axios.post("https://ashvamedha.onrender.com/college/score", {
           collegeName: item.collegeName,
         })
       );
@@ -97,18 +85,22 @@ function Leaderboard() {
     fetchScore();
   }, []);
   return (
-    !isLoading && (
-      <div className="leaderboard">
-        <div className="heading">
-          <h1 className="text">POINT TABLE</h1>
+    <div>
+      <Navbar />
+      {!isLoading && (
+        <div className="leaderboard">
+          <div className="heading">
+            <h1 className="text">POINTS TABLE</h1>
+          </div>
+          <div className="content">
+            {collegeScore.map((item, index) => (
+              <CollegeWrapper collegeInfo={item} serialNo={index} />
+            ))}
+          </div>
         </div>
-        <div className="content">
-          {collegeScore.map((item, index) => (
-            <CollegeWrapper collegeInfo={item} serialNo={index} />
-          ))}
-        </div>
-      </div>
-    )
+      )}
+      <Footer />
+    </div>
   );
 }
 

@@ -17,9 +17,12 @@ function PointDetails() {
   async function fetchdata() {
     try {
       dispatch(setLoading(true));
-      const response = await axios.post("/college/", {
-        collegeName: params.collegename,
-      });
+      const response = await axios.post(
+        "https://ashvamedha.onrender.com/college/",
+        {
+          collegeName: params.collegename,
+        }
+      );
       setPointinfo(response.data.result.modifiedResult);
     } catch (e) {
       console.log("error from point deatils side", e);

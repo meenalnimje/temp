@@ -9,7 +9,7 @@ import React, { useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
-import ashvamedhaLogo from "../../assets/demoPhotos/ashvamedhaLogo.png";
+import ashvamedhaLogo from "../../assests/demoPhotos/ashvamedhaLogo.png";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -34,7 +34,7 @@ function Navbar() {
     },
     {
       title: "Leaderboard",
-      path: "/leaderboard",
+      path: "#",
       cName: "nav-text",
       navigate: true,
     },

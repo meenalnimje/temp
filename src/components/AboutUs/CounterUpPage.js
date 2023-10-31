@@ -35,7 +35,7 @@ const CounterUpPage = () => {
         <div className="counterUp">
           <h1>
             {countersOn[2] && (
-              <CountUp start={100} end={400} duration={2} delay={0} />
+              <CountUp start={100} end={1000} duration={2} delay={0} />
             )}
             +
           </h1>
@@ -45,7 +45,7 @@ const CounterUpPage = () => {
         <div className="counterUp">
           <h1>
             {countersOn[3] && (
-              <CountUp start={1000} end={2000} duration={2} delay={0} />
+              <CountUp start={1000} end={5000} duration={2} delay={0} />
             )}
             +
           </h1>
