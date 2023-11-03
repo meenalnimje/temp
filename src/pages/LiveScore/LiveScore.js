@@ -27,7 +27,8 @@ function LiveScore() {
     }
   }
   useEffect(() => {
-    fetchLiveScore();
+    const interval = setInterval(fetchLiveScore, 5000);
+    return () => clearInterval(interval);
   }, [params]);
   return (
     <div className="score-page">
@@ -35,9 +36,6 @@ function LiveScore() {
       <div className="live-score">
         <div className="sport-name">
           <div className="name">{sportname}</div>
-          <div className="img">
-            <img src={live} alt="" />
-          </div>
         </div>
         <div className="score-content">
           {liveScore.length !== 0 &&

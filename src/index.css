@@ -8,3 +8,18 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+:root {
+    --color-primary: #030027;
+    --color-secondary: #060046;
+    --color-tertiary: #09006d;
+    --color-quaternary: #0d009f;
+    --color-quinary: #1300e2;
+    /*
+    --color-primary: #5192ED;
+    --color-secondary: #69A1F0;
+    --color-tertiary: #7EAEF2;
+    --color-quaternary: #90BAF5;
+    --color-quinary: #A2C4F5;
+    */
+  }

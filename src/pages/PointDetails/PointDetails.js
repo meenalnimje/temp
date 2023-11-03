@@ -35,7 +35,21 @@ function PointDetails() {
   useEffect(() => {
     fetchdata();
   }, []);
-  return (
+  return pointinfo.length === 0 ? (
+    <div className="pd">
+      <Navbar />
+      {/* <div class="wrapper">
+        <h3 class="typing">
+          Your team is yet to score <br />
+        </h3>
+      </div> */}
+      <div class="wrapper">
+        <h2 class="text_shadows">Your team is yet to score</h2>
+      </div>
+
+      <Footer />
+    </div>
+  ) : (
     <div className="pd">
       <Navbar />
       <div className="main">

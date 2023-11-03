@@ -28,7 +28,9 @@ function ScoreCard(props) {
       <div className="part2">
         <div className="set-details setname">{props.info.set}</div>
         <div className="set-details">{props.info.category}</div>
-        <div className="set-details">Location : {props.info.location}</div>
+        <div className="set-details location">
+          Location : {props.info.location}
+        </div>
       </div>
     </div>
   );

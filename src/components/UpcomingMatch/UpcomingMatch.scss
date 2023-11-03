@@ -13,8 +13,8 @@
 
     .popup-inner {
         position: relative;
-        width: 50%;
-        height: 80%;
+        width: 40%;
+        height: 100%;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(10px);
@@ -110,7 +110,7 @@
 @media only screen and (max-width: 350px) {
     .popup {
         position: fixed;
-        border: 2px solid red;
+        // border: 2px solid red;
         top: 0;
         left: 0;
         width: 100%;
