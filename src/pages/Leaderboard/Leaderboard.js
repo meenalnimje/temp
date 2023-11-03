@@ -15,23 +15,33 @@ function Leaderboard() {
   const dispatch = useDispatch();
   const collegeInfo = [
     {
+      collegeName: "cv-raman",
+      displayName: "CV RAMAN",
+      collegeLogo: "",
+    },
+    {
       collegeName: "niser",
       displayName: "NISER",
-      collegeLogo: "",
+      collegeLogo: "done",
     },
     {
-      collegeName: "iitbbs",
-      displayName: "IIT BBS",
-      collegeLogo: "",
+      collegeName: "iitbbs-a",
+      displayName: "IIT BBS-A",
+      collegeLogo: "done",
     },
     {
-      collegeName: "bjb",
-      displayName: "B.J.B",
-      collegeLogo: "",
+      collegeName: "iitbbs-b",
+      displayName: "IIT BBS-B",
+      collegeLogo: "done",
     },
     {
-      collegeName: "bgu",
-      displayName: "B.G.U",
+      collegeName: "sbu",
+      displayName: "S.B.U",
+      collegeLogo: "done",
+    },
+    {
+      collegeName: "outr",
+      displayName: "OUTR",
       collegeLogo: "",
     },
     {
@@ -46,18 +56,53 @@ function Leaderboard() {
     },
 
     {
-      collegeName: "cvraman",
-      displayName: "CVRAMAN",
-      collegeLogo: "",
-    },
-    {
-      collegeName: "outr",
-      displayName: "OUTR",
-      collegeLogo: "",
-    },
-    {
       collegeName: "silicon",
       displayName: "SILICON",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "cet",
+      displayName: "C.E.T",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "git",
+      displayName: "G.I.T",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "ssu",
+      displayName: "S.S.U",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "bjb",
+      displayName: "B.J.B",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "bgu",
+      displayName: "B.G.U",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "ict",
+      displayName: "I.C.T",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "trident",
+      displayName: "Trident technology",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "iiit",
+      displayName: "I.I.I.T",
+      collegeLogo: "",
+    },
+    {
+      collegeName: "gita",
+      displayName: "G.I.T.A",
       collegeLogo: "",
     },
   ];
@@ -90,7 +135,10 @@ function Leaderboard() {
       {!isLoading && (
         <div className="leaderboard">
           <div className="heading">
-            <h1 className="text">POINTS TABLE</h1>
+            <h2 className="text">
+              <span className="h1">POINTS</span>
+              <span className="h2">TABLE</span>
+            </h2>
           </div>
           <div className="content">
             {collegeScore.map((item, index) => (

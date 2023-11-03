@@ -34,7 +34,7 @@ function Navbar() {
     },
     {
       title: "Leaderboard",
-      path: "#",
+      path: "/leaderboard",
       cName: "nav-text",
       navigate: true,
     },
@@ -69,13 +69,22 @@ function Navbar() {
           {menuData.map((item, index) => {
             return item.navigate ? (
               <li key={index} className={item.cName}>
-                <Link to="#" onClick={() => navigate(`${item.path}`)}>
+                <Link
+                  to="#"
+                  onClick={() => {
+                    navigate(`${item.path}`);
+                  }}
+                >
                   <span>{item.title}</span>
                 </Link>
               </li>
             ) : (
               <li key={index} className={item.cName}>
-                <Link to={item.path} smooth={true}>
+                <Link
+                  to={item.path}
+                  smooth={true}
+                  onClick={() => setShowMediaIcons(false)}
+                >
                   <span>{item.title}</span>
                 </Link>
               </li>

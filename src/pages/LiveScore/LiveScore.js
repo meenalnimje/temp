@@ -40,9 +40,8 @@ function LiveScore() {
           </div>
         </div>
         <div className="score-content">
-          {liveScore.map((item) => (
-            <ScoreCard info={item} />
-          ))}
+          {liveScore.length !== 0 &&
+            liveScore.map((item) => <ScoreCard info={item} />)}
         </div>
       </div>
       <Footer />

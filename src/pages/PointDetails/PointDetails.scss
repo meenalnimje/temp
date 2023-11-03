@@ -1,10 +1,40 @@
-.pointdetail {
+.pd {
+    // border: 2px solid red;
     background-color: #EADBC8;
-    height: 100vh;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    color: #141E46;
+
+    .main {
+        // border: 2px solid red;
+        height: 100vh;
+        // background-color: #EADBC8;
+
+        .heading-point {
+            margin-top: 25px;
+            // border: 2px solid red;
+            font-size: 46px;
+            text-align: center;
+
+            .h1 {
+                color: #FF6F0F;
+                margin-right: 10px;
+            }
+
+            .h2 {
+                color: #141E46;
+            }
+
+        }
+
+        .pointdetail {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            // border: 2px solid red;
+            scroll-behavior: auto;
+            color: #141E46;
+        }
+
+    }
+
 }

@@ -54,7 +54,7 @@ function OurTeam() {
     },
     {
       name: "Anurag Barman",
-      position: "Sponsor Co-ordinator",
+      position: "Spons Co-ordinator",
       image: teamImg[2]?.image?.url,
       no: "+91 7099537740",
     },
@@ -85,7 +85,7 @@ function OurTeam() {
       no: "+91 9959533758",
     },
     {
-      name: "Ram Reddy",
+      name: "Ram",
       position: "Core Head",
       image: teamImg[8]?.image?.url,
       no: "+91 8328537734",

@@ -2,6 +2,8 @@ import "./PointDetails.scss";
 
 import React, { useEffect, useState } from "react";
 
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import PointInfo from "../../components/PointInfo/PointInfo";
 import axios from "axios";
 import { setLoading } from "../../redux/appSlice";
@@ -34,13 +36,23 @@ function PointDetails() {
     fetchdata();
   }, []);
   return (
-    !isLoading && (
-      <div className="pointdetail">
-        {pointinfo.map((item, index) => (
-          <PointInfo gameInfo={item} serialNo={index} />
-        ))}
+    <div className="pd">
+      <Navbar />
+      <div className="main">
+        <h2 className="heading-point">
+          <span className="h1">POINT</span>
+          <span className="h2">INFO.</span>
+        </h2>
+        {!isLoading && (
+          <div className="pointdetail">
+            {pointinfo.map((item, index) => (
+              <PointInfo gameInfo={item} serialNo={index} />
+            ))}
+          </div>
+        )}
       </div>
-    )
+      <Footer />
+    </div>
   );
 }
 

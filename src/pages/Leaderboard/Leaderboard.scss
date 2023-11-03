@@ -4,18 +4,23 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
-    color: rgb(24, 0, 182);
-    background-color: rgba($color: #000000, $alpha: 1.0);
-    background-image: url("../../assests/demoPhotos/point.jpg");
+    color: #030027;
+    background-image: url("../../assests/demoPhotos/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // border: 2px solid red;
-    // margin-bottom: 40px;
 
     .heading {
-        font-size: 36px;
-        margin: 10px;
+        font-size: 46px;
+        margin: 20px;
+
+        .text {
+            .h1 {
+                color: #FF6F0F;
+                margin-right: 20px;
+            }
+
+        }
 
     }
 
@@ -26,7 +31,8 @@
         justify-content: space-around;
         flex-direction: column;
         height: 90%;
-        border: 2px solid white;
+        // border: 2px solid white;
+        margin-bottom: 40px;
         padding: 20px;
         border-radius: 10px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));

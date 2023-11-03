@@ -19,8 +19,8 @@ function ImageUploder() {
     try {
       const result = await axios.post("http://localhost:4000/upload/create", {
         image,
-        folderName: "logos",
-        name: "tshirt",
+        folderName: "collegeLogos",
+        name: "gita",
       });
     } catch (err) {
       console.log("error", err);
@@ -38,7 +38,7 @@ function ImageUploder() {
         />
         <button>Submit</button>
       </form>
-      <img src={image} alt="" style={{ width: "400px", height: "400px" }} />
+      <img src={image} alt="" style={{ width: "200px", height: "200px" }} />
     </div>
   );
 }

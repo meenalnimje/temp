@@ -83,13 +83,6 @@ function Events() {
       desc: "The sound of the ball hitting the table is the sound of opportunity. Don't miss your shot.",
       date: "28th-29th October",
     },
-    {
-      id: 7,
-      sportName: "Lawn Tennis",
-      imgUrl: eventImg[5]?.image?.url,
-      desc: "Tennis is mostly mental. You win or lose the match before you even go out there.",
-      date: "28th-29th October",
-    },
   ];
   return (
     !isLoading && (
