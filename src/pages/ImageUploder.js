@@ -20,7 +20,7 @@ function ImageUploder() {
       const result = await axios.post("http://localhost:4000/upload/create", {
         image,
         folderName: "collegeLogos",
-        name: "silicon",
+        name: "bgu",
       });
     } catch (err) {
       console.log("error", err);
